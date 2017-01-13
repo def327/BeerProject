@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="beer-items" type="BeerItemsType" />
+    <xs:complexType name="BeerItemsType">
+        <xs:sequence>
+            <xs:element name="beer" type="BeerType" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="BeerType">
+        <xs:sequence minOccurs="1" maxOccurs="1">
+        	<xs:element name="name" type="NameType" />
+            <xs:element name="sort-type" type="SortType" />
+            <xs:element name="manufacturer" type="ManufacturerType" />
+            <xs:element name="ingredients" type="IngredientsType" />
+            <xs:element name="chars" type="CharsType" />
+            <xs:element name="alcohol" type="AlcoholHavingType" />
+        </xs:sequence>
+        <xs:attribute name="beer-id" use="required">
+            <xs:simpleType>
+                <xs:restriction base="xs:positiveInteger">
+                    <xs:maxInclusive value="100" />
+                    <xs:minInclusive value="1" />
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:complexType>
+    <xs:complexType name="IngredientsType">
+        <xs:sequence minOccurs="1" maxOccurs="1">
+            <xs:element name="water" type="PercentType" />
+            <xs:element name="sugar" type="PercentType" />
+            <xs:element name="hop" type="PercentType" />
+            <xs:element name="malt" type="PercentType" />
+            <xs:element name="yeast" type="PercentType" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="CharsType">
+        <xs:sequence minOccurs="1" maxOccurs="1">
+            <xs:element name="beer-clarity" type="PercentType" />
+            <xs:element name="is-filtered" type="xs:boolean" />
+            <xs:element name="food-value" type="FoodValueType" />
+            <xs:element name="packaging-type" type="PackagingType" />
+        </xs:sequence>
+        <xs:attribute name="alcohol-volume" use="optional">
+            <xs:simpleType>
+                <xs:restriction base="xs:decimal">
+                    <xs:maxInclusive value="100" />
+                    <xs:minInclusive value="3" />
+                    <xs:fractionDigits value="9" />
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:complexType>
+    <xs:simpleType name="SortType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="light" />
+            <xs:enumeration value="black" />
+            <xs:enumeration value="lager" />
+            <xs:enumeration value="ale" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="PercentType">
+        <xs:restriction base="xs:positiveInteger">
+            <xs:maxInclusive value="100" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="AlcoholHavingType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="alcoholic beverage" />
+            <xs:enumeration value="soft beverage" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="NameType">
+    	<xs:restriction base="xs:string">
+    		<xs:pattern value="[A-Z][a-zA-z ]+" />
+    	</xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="ManufacturerType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Z][a-zA-z ]+" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="FoodValueType">
+        <xs:restriction base="xs:decimal">
+            <xs:minExclusive value="0" />
+            <xs:fractionDigits value="1" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:complexType name="PackagingType">
+        <xs:sequence>
+            <xs:element name="package-capacity">
+                <xs:simpleType>
+                    <xs:restriction base="xs:decimal">
+                        <xs:enumeration value="0.33" />
+                        <xs:enumeration value="0.5" />
+                        <xs:enumeration value="1.0" />
+                        <xs:enumeration value="1.5" />
+                        <xs:enumeration value="2.0" />
+                        <xs:enumeration value="2.5" />
+                        <xs:enumeration value="20" />
+                        <xs:enumeration value="30" />
+                        <xs:enumeration value="40" />
+                        <xs:enumeration value="50" />
+                        <xs:enumeration value="100" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="package-material">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="glass" />
+                        <xs:enumeration value="plastic" />
+                        <xs:enumeration value="steel" />
+                        <xs:enumeration value="tree" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

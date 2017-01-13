@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beer-items xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BeerItemsScheme.xsd">
+
+  <beer beer-id="1">
+  	<name>Zhiguli amber</name>
+  		<!--Указывать сорт пива, выбор из enum схемы-->
+    <sort-type>light</sort-type>
+		<!--Указывать производителя пива, тут стоит регулярка на то чтобы название с большой буквы и можно пробелы -->
+    <manufacturer>Olivaria brewery</manufacturer>
+		<!--Указывать в процентное содаржание каждого ингредиента пива, можно ставить только целые зачения  -->
+    <ingredients>
+      <water>89</water>
+      <sugar>2</sugar>
+      <hop>3</hop>
+      <malt>3</malt>
+      <yeast>3</yeast>
+    </ingredients>
+	<!--Атрибут для процентного градуса, необезателен если пиво безакогольное смотри тег <alcohol> , можно ставить только целые зачения -->
+    <chars alcohol-volume="4.8">
+		<!--Прозрачность пива в процентах -->
+      <beer-clarity>11</beer-clarity>
+	  	<!--Тут понтяно и так-->
+      <is-filtered>true</is-filtered>
+	    <!--Атрибут для количетсва килоколорий( * ккал), можно ставить только целые зачения -->
+      <food-value>42</food-value>
+      <packaging-type>
+	    <!--Тут понтяно и так -->
+        <package-capacity>0.5</package-capacity>
+		<!--Материал тары, смотри enum схемы для значения-->
+        <package-material>glass</package-material>
+      </packaging-type>      
+    </chars>
+		<!--Алкогольное или безалкогольное пиво, смотри enum схемы для значения-->
+    <alcohol>alcoholic beverage</alcohol>
+  </beer>
+  
+  <beer beer-id="2">
+  	<name>Praha pilsner</name>
+    <sort-type>light</sort-type>
+    <manufacturer>Olivaria brewery</manufacturer>
+    <ingredients>
+      <water>89</water>
+      <sugar>2</sugar>
+      <hop>3</hop>
+      <malt>3</malt>
+      <yeast>3</yeast>
+    </ingredients>
+    <chars alcohol-volume="4.6">
+      <beer-clarity>11</beer-clarity>
+      <is-filtered>true</is-filtered>
+      <food-value>42</food-value>
+      <packaging-type>
+        <package-capacity>0.5</package-capacity>
+        <package-material>glass</package-material>
+      </packaging-type>      
+    </chars>
+    <alcohol>alcoholic beverage</alcohol>
+  </beer>
+  
+  <beer beer-id="3">
+  	<name>The taste of Manchester</name>
+    <sort-type>light</sort-type>
+    <manufacturer>Olivaria brewery</manufacturer>
+    <ingredients>
+      <water>89</water>
+      <sugar>2</sugar>
+      <hop>3</hop>
+      <malt>3</malt>
+      <yeast>3</yeast>
+    </ingredients>
+    <chars alcohol-volume="4.4">
+      <beer-clarity>11</beer-clarity>
+      <is-filtered>true</is-filtered>
+      <food-value>42</food-value>
+      <packaging-type>
+        <package-capacity>0.5</package-capacity>
+        <package-material>glass</package-material>
+      </packaging-type>      
+    </chars>
+    <alcohol>alcoholic beverage</alcohol>
+  </beer>
+  
+  <beer beer-id="4">
+  	<name>Baltika export</name>
+    <sort-type>light</sort-type>
+    <manufacturer>Olivaria brewery</manufacturer>
+    <ingredients>
+      <water>88</water>
+      <sugar>3</sugar>
+      <hop>3</hop>
+      <malt>3</malt>
+      <yeast>3</yeast>
+    </ingredients>
+    <chars alcohol-volume="4.6">
+      <beer-clarity>12</beer-clarity>
+      <is-filtered>true</is-filtered>
+      <food-value>46</food-value>
+      <packaging-type>
+        <package-capacity>0.5</package-capacity>
+        <package-material>steel</package-material>
+      </packaging-type>      
+    </chars>
+    <alcohol>alcoholic beverage</alcohol>
+  </beer>
+  
+  <beer beer-id="5">
+  	<name>Holsten pilsener</name>
+    <sort-type>light</sort-type>
+    <manufacturer>Olivaria brewery</manufacturer>
+    <ingredients>
+      <water>89</water>
+      <sugar>2</sugar>
+      <hop>3</hop>
+      <malt>3</malt>
+      <yeast>3</yeast>
+    </ingredients>
+    <chars alcohol-volume="4.5">
+      <beer-clarity>11</beer-clarity>
+      <is-filtered>true</is-filtered>
+      <food-value>43</food-value>
+      <packaging-type>
+        <package-capacity>0.5</package-capacity>
+        <package-material>steel</package-material>
+      </packaging-type>      
+    </chars>
+    <alcohol>alcoholic beverage</alcohol>
+  </beer>
+  
+  <beer beer-id="6">
+  	<name>Alivaria white gold</name>
+    <sort-type>light</sort-type>
+    <manufacturer>Olivaria brewery</manufacturer>
+    <ingredients>
+      <water>88</water>
+      <sugar>3</sugar>
+      <hop>3</hop>
+      <malt>3</malt>
+      <yeast>3</yeast>
+    </ingredients>
+    <chars alcohol-volume="5.0">
+      <beer-clarity>12</beer-clarity>
+      <is-filtered>true</is-filtered>
+      <food-value>46</food-value>
+      <packaging-type>
+        <package-capacity>0.5</package-capacity>
+        <package-material>steel</package-material>
+      </packaging-type>      
+    </chars>
+    <alcohol>alcoholic beverage</alcohol>
+  </beer>
+  
+</beer-items>
