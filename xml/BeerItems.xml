@@ -3,11 +3,8 @@
 
   <beer beer-id="1">
   	<name>Zhiguli amber</name>
-  		<!--Указывать сорт пива, выбор из enum схемы-->
-    <sort-type>light</sort-type>
-		<!--Указывать производителя пива, тут стоит регулярка на то чтобы название с большой буквы и можно пробелы -->
+    <sort-type>lager</sort-type>
     <manufacturer>Olivaria brewery</manufacturer>
-		<!--Указывать в процентное содаржание каждого ингредиента пива, можно ставить только целые зачения  -->
     <ingredients>
       <water>89</water>
       <sugar>2</sugar>
@@ -15,22 +12,15 @@
       <malt>3</malt>
       <yeast>3</yeast>
     </ingredients>
-	<!--Атрибут для процентного градуса, необезателен если пиво безакогольное смотри тег <alcohol> , можно ставить только целые зачения -->
     <chars alcohol-volume="4.8">
-		<!--Прозрачность пива в процентах -->
       <beer-clarity>11</beer-clarity>
-	  	<!--Тут понтяно и так-->
       <is-filtered>true</is-filtered>
-	    <!--Атрибут для количетсва килоколорий( * ккал), можно ставить только целые зачения -->
       <food-value>42</food-value>
       <packaging-type>
-	    <!--Тут понтяно и так -->
         <package-capacity>0.5</package-capacity>
-		<!--Материал тары, смотри enum схемы для значения-->
         <package-material>glass</package-material>
       </packaging-type>      
     </chars>
-		<!--Алкогольное или безалкогольное пиво, смотри enum схемы для значения-->
     <alcohol>alcoholic beverage</alcohol>
   </beer>
   
@@ -105,7 +95,7 @@
   
   <beer beer-id="5">
   	<name>Holsten pilsener</name>
-    <sort-type>light</sort-type>
+    <sort-type>ale</sort-type>
     <manufacturer>Olivaria brewery</manufacturer>
     <ingredients>
       <water>89</water>
@@ -128,7 +118,7 @@
   
   <beer beer-id="6">
   	<name>Alivaria white gold</name>
-    <sort-type>light</sort-type>
+    <sort-type>black</sort-type>
     <manufacturer>Olivaria brewery</manufacturer>
     <ingredients>
       <water>88</water>
@@ -148,5 +138,27 @@
     </chars>
     <alcohol>alcoholic beverage</alcohol>
   </beer>
-  
+  <beer beer-id="7">
+  	<name>Budweiser Budvar</name>
+  	<sort-type>lager</sort-type>
+  	<manufacturer>Anheuser Busch</manufacturer>
+  	<ingredients>
+  		<water>87</water>
+  		<sugar>2</sugar>
+  		<hop>1</hop>
+  		<malt>5</malt>
+  		<yeast>5</yeast>
+  	</ingredients>
+  	<chars>
+  		<beer-clarity>15</beer-clarity>
+  		<is-filtered>true</is-filtered>
+  		<food-value>42</food-value>
+  		<packaging-type>
+  			<package-capacity>0.33</package-capacity>
+  			<package-material>glass</package-material>
+  		</packaging-type>
+  	</chars>
+  	<alcohol>soft beverage</alcohol>
+  </beer>
+
 </beer-items>
