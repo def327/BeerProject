@@ -11,7 +11,7 @@ public class Runner {
 
 
 	/**
-	 *  Здесь прасеры тестить как вариант 
+	 *  Test parsers here
 	 * @param args
 	 */
 	public static void main(String[] args) {

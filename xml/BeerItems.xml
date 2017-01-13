@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <beer-items xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BeerItemsScheme.xsd">
-
   <beer beer-id="1">
   	<name>Zhiguli amber</name>
     <sort-type>lager</sort-type>
@@ -12,6 +11,7 @@
       <malt>3</malt>
       <yeast>3</yeast>
     </ingredients>
+    <alcohol>alcoholic beverage</alcohol>
     <chars alcohol-volume="4.8">
       <beer-clarity>11</beer-clarity>
       <is-filtered>true</is-filtered>
@@ -21,7 +21,6 @@
         <package-material>glass</package-material>
       </packaging-type>      
     </chars>
-    <alcohol>alcoholic beverage</alcohol>
   </beer>
   
   <beer beer-id="2">
@@ -35,6 +34,7 @@
       <malt>3</malt>
       <yeast>3</yeast>
     </ingredients>
+	<alcohol>soft beverage</alcohol>
     <chars alcohol-volume="4.6">
       <beer-clarity>11</beer-clarity>
       <is-filtered>true</is-filtered>
@@ -44,7 +44,6 @@
         <package-material>glass</package-material>
       </packaging-type>      
     </chars>
-    <alcohol>alcoholic beverage</alcohol>
   </beer>
   
   <beer beer-id="3">
@@ -58,6 +57,7 @@
       <malt>3</malt>
       <yeast>3</yeast>
     </ingredients>
+	<alcohol>alcoholic beverage</alcohol>
     <chars alcohol-volume="4.4">
       <beer-clarity>11</beer-clarity>
       <is-filtered>true</is-filtered>
@@ -67,7 +67,6 @@
         <package-material>glass</package-material>
       </packaging-type>      
     </chars>
-    <alcohol>alcoholic beverage</alcohol>
   </beer>
   
   <beer beer-id="4">
@@ -81,6 +80,7 @@
       <malt>3</malt>
       <yeast>3</yeast>
     </ingredients>
+	<alcohol>alcoholic beverage</alcohol>
     <chars alcohol-volume="4.6">
       <beer-clarity>12</beer-clarity>
       <is-filtered>true</is-filtered>
@@ -90,7 +90,6 @@
         <package-material>steel</package-material>
       </packaging-type>      
     </chars>
-    <alcohol>alcoholic beverage</alcohol>
   </beer>
   
   <beer beer-id="5">
@@ -104,6 +103,7 @@
       <malt>3</malt>
       <yeast>3</yeast>
     </ingredients>
+	<alcohol>alcoholic beverage</alcohol>
     <chars alcohol-volume="4.5">
       <beer-clarity>11</beer-clarity>
       <is-filtered>true</is-filtered>
@@ -113,7 +113,6 @@
         <package-material>steel</package-material>
       </packaging-type>      
     </chars>
-    <alcohol>alcoholic beverage</alcohol>
   </beer>
   
   <beer beer-id="6">
@@ -127,6 +126,7 @@
       <malt>3</malt>
       <yeast>3</yeast>
     </ingredients>
+	<alcohol>alcoholic beverage</alcohol>
     <chars alcohol-volume="5.0">
       <beer-clarity>12</beer-clarity>
       <is-filtered>true</is-filtered>
@@ -136,8 +136,8 @@
         <package-material>steel</package-material>
       </packaging-type>      
     </chars>
-    <alcohol>alcoholic beverage</alcohol>
   </beer>
+  
   <beer beer-id="7">
   	<name>Budweiser Budvar</name>
   	<sort-type>lager</sort-type>
@@ -149,6 +149,7 @@
   		<malt>5</malt>
   		<yeast>5</yeast>
   	</ingredients>
+	<alcohol>soft beverage</alcohol>
   	<chars>
   		<beer-clarity>15</beer-clarity>
   		<is-filtered>true</is-filtered>
@@ -158,7 +159,6 @@
   			<package-material>glass</package-material>
   		</packaging-type>
   	</chars>
-  	<alcohol>soft beverage</alcohol>
   </beer>
 
 </beer-items>
