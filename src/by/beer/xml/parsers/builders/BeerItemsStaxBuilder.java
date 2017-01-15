@@ -5,9 +5,8 @@ package by.beer.xml.parsers.builders;
 
 import java.util.List;
 
-import javax.xml.parsers.ParserConfigurationException;
-
 import by.beer.entities.beeritem.BeerItem;
+import by.beeritems.xml.parsers.stax.StAXBeerItemsParser;
 
 /**
  * @author Дмитрий
@@ -24,9 +23,10 @@ public class BeerItemsStaxBuilder extends AbstractBeerItemsBuilder {
 	}
 
 	@Override
-	public List<BeerItem> buildListBeerItems(String fileName) throws ParserConfigurationException {
-		// TODO Auto-generated method stub
-		return null;
+	public List<BeerItem> buildListBeerItems(String fileName) {
+		StAXBeerItemsParser parser = new StAXBeerItemsParser();
+		parser.buildListBeerItems("BeerItems.xml");
+		return parser.getBeerItems();
 	}
 
 }
