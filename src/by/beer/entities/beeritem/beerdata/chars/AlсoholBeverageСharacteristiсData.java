@@ -49,4 +49,40 @@ public class AlсoholBeverageСharacteristiсData extends СharacteristiсData {
 		this.alcoholVolume = alcoholVolume;
 	}
 
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return super.toString() + "AlсoholBeverageСharacteristiсData [alcoholVolume=" + alcoholVolume + "]";
+	}
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#hashCode()
+	 */
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = super.hashCode();
+		result = prime * result + Float.floatToIntBits(alcoholVolume);
+		return result;
+	}
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (!super.equals(obj))
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		AlсoholBeverageСharacteristiсData other = (AlсoholBeverageСharacteristiсData) obj;
+		if (Float.floatToIntBits(alcoholVolume) != Float.floatToIntBits(other.alcoholVolume))
+			return false;
+		return true;
+	}
+
 }

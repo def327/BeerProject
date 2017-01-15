@@ -79,4 +79,54 @@ public class ChemicalComponentsComposition {
 		this.yeastСapacity = yeastСapacity;
 	}
 
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "ChemicalComponentsComposition [waterСapacity=" + waterСapacity + ", sugarСapacity=" + sugarСapacity
+				+ ", hopСapacity=" + hopСapacity + ", maltСapacity=" + maltСapacity + ", yeastСapacity=" + yeastСapacity
+				+ "]";
+	}
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#hashCode()
+	 */
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + hopСapacity;
+		result = prime * result + maltСapacity;
+		result = prime * result + sugarСapacity;
+		result = prime * result + waterСapacity;
+		result = prime * result + yeastСapacity;
+		return result;
+	}
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		ChemicalComponentsComposition other = (ChemicalComponentsComposition) obj;
+		if (hopСapacity != other.hopСapacity)
+			return false;
+		if (maltСapacity != other.maltСapacity)
+			return false;
+		if (sugarСapacity != other.sugarСapacity)
+			return false;
+		if (waterСapacity != other.waterСapacity)
+			return false;
+		if (yeastСapacity != other.yeastСapacity)
+			return false;
+		return true;
+	}
+
 }

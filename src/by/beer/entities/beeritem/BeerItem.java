@@ -113,4 +113,65 @@ public class BeerItem {
 		this.charsData = charsData;
 	}
 
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "BeerItem [beerId=" + beerId + ", brandData=" + brandData + ", chemicalComposition="
+				+ chemicalComposition + ", alcoholBeerType=" + alcoholBeerType + ", charsData=" + charsData + "]";
+	}
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#hashCode()
+	 */
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((alcoholBeerType == null) ? 0 : alcoholBeerType.hashCode());
+		result = prime * result + beerId;
+		result = prime * result + ((brandData == null) ? 0 : brandData.hashCode());
+		result = prime * result + ((charsData == null) ? 0 : charsData.hashCode());
+		result = prime * result + ((chemicalComposition == null) ? 0 : chemicalComposition.hashCode());
+		return result;
+	}
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		BeerItem other = (BeerItem) obj;
+		if (alcoholBeerType == null) {
+			if (other.alcoholBeerType != null)
+				return false;
+		} else if (!alcoholBeerType.equals(other.alcoholBeerType))
+			return false;
+		if (beerId != other.beerId)
+			return false;
+		if (brandData == null) {
+			if (other.brandData != null)
+				return false;
+		} else if (!brandData.equals(other.brandData))
+			return false;
+		if (charsData == null) {
+			if (other.charsData != null)
+				return false;
+		} else if (!charsData.equals(other.charsData))
+			return false;
+		if (chemicalComposition == null) {
+			if (other.chemicalComposition != null)
+				return false;
+		} else if (!chemicalComposition.equals(other.chemicalComposition))
+			return false;
+		return true;
+	}
+
 }

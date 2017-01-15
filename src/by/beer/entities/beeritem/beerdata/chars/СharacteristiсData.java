@@ -90,4 +90,55 @@ public abstract class СharacteristiсData {
 		this.packageType = packageType;
 	}
 
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "СharacteristiсData [beerClarity=" + beerClarity + ", isFiltered=" + isFiltered + ", foodValue="
+				+ foodValue + ", packageType=" + packageType + "]";
+	}
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#hashCode()
+	 */
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + beerClarity;
+		result = prime * result + Float.floatToIntBits(foodValue);
+		result = prime * result + (isFiltered ? 1231 : 1237);
+		result = prime * result + ((packageType == null) ? 0 : packageType.hashCode());
+		return result;
+	}
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		СharacteristiсData other = (СharacteristiсData) obj;
+		if (beerClarity != other.beerClarity)
+			return false;
+		if (Float.floatToIntBits(foodValue) != Float.floatToIntBits(other.foodValue))
+			return false;
+		if (isFiltered != other.isFiltered)
+			return false;
+		if (packageType == null) {
+			if (other.packageType != null)
+				return false;
+		} else if (!packageType.equals(other.packageType))
+			return false;
+		return true;
+	}
+	
+	
+
 }

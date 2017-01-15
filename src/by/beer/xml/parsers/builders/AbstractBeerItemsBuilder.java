@@ -1,29 +1,39 @@
-/**
- * 
- */
+
 package by.beer.xml.parsers.builders;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.xml.parsers.ParserConfigurationException;
-
 import by.beer.entities.beeritem.BeerItem;
 
 /**
- * @author Дмитрий
+ * Class {@code AbstractBeerItemsBuilder} provides method to create a list of
+ * {@code BeerItem} objects.
+ * 
+ * @author Дмитрий Зяблов
+ * 
+ * @see BeerItem
  *
  */
 public abstract class AbstractBeerItemsBuilder {
 
+	/**
+	 * A list of {@code BeerItem} objects.
+	 */
 	protected List<BeerItem> beerItems;
 
+	/**
+	 * Constructs a default <code>AbstractBeerItemsBuilder</code>
+	 */
 	public AbstractBeerItemsBuilder() {
 		beerItems = new ArrayList<BeerItem>();
 	}
 
 	/**
-	 * @param humanEatings
+	 * Constructs a <code>AbstractBeerItemsBuilder</code> based on field.
+	 * 
+	 * @param beerItems
+	 *            - a list of {@code BeerItem} objects
 	 */
 	public AbstractBeerItemsBuilder(List<BeerItem> beerItems) {
 		this.beerItems = beerItems;
@@ -34,14 +44,14 @@ public abstract class AbstractBeerItemsBuilder {
 	}
 
 	/**
-	 * TODO В этом методе при переодпрделении создаёте объект !вашего парсера,
-	 * здесь же вызываете его методы, парсите и на выходе отдаёте коллекцию с
-	 * типом <beerItem> c инициализированными!!! полями
+	 * Return's a list of {@code BeerItem} objects with initialized fields
 	 * 
 	 * @param fileName
-	 * @return
-	 * @throws ParserConfigurationException
+	 *            - a path to xml document with {@code BeerItem} objects
+	 * 
+	 * @return a list of {@code BeerItem} object's
+	 * 
 	 */
-	abstract public List<BeerItem> buildListBeerItems(String fileName) throws ParserConfigurationException;
+	abstract public List<BeerItem> buildListBeerItems(String fileName);
 
 }
