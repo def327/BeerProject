@@ -1,6 +1,3 @@
-/**
- * 
- */
 package by.beer.xml.parsers.builders;
 
 import java.util.List;
@@ -9,7 +6,7 @@ import by.beer.entities.beeritem.BeerItem;
 import by.beeritems.xml.parsers.stax.StAXBeerItemsParser;
 
 /**
- * @author Дмитрий
+ * @author Igor Shurupov
  *
  */
 public class BeerItemsStaxBuilder extends AbstractBeerItemsBuilder {

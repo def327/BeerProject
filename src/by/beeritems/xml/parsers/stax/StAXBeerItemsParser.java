@@ -1,5 +1,7 @@
 package by.beeritems.xml.parsers.stax;
-
+/**
+ * Author Igor Shurupov
+ */
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
