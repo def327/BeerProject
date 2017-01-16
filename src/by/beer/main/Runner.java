@@ -16,26 +16,25 @@ import by.beer.xml.parsers.builders.BeerItemsDOMBuilder;
  */
 public class Runner {
 
-
 	/**
-	 *  Test parsers here
+	 * Test parsers here
+	 * 
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		
+
 		String pathToXMLDocument = "xml\\BeerItems.xml";
-		
+
 		AbstractBeerItemsBuilder beerItemsBuilder = new BeerItemsDOMBuilder();
-		
-		List<BeerItem> list = 	beerItemsBuilder.buildListBeerItems(pathToXMLDocument);
-		
+
+		List<BeerItem> list = beerItemsBuilder.buildListBeerItems(pathToXMLDocument);
+
 		for (Iterator<BeerItem> iterator = list.iterator(); iterator.hasNext();) {
 			BeerItem beerItem = (BeerItem) iterator.next();
-			
-			System.out.println(beerItem.toString());
+
+			System.out.println(beerItem.getCharsData().toString());
 		}
-		
-		
+
 	}
 
 }

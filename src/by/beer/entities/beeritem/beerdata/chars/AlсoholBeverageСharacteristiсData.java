@@ -9,7 +9,7 @@ package by.beer.entities.beeritem.beerdata.chars;
  * information about {@code BeerItem} class, which has an alcohol.
  * 
  * 
- * @author Дмитрий
+ * @author Дмитрий Зяблов
  * 
  * @see СharacteristiсData
  *
@@ -49,17 +49,11 @@ public class AlсoholBeverageСharacteristiсData extends СharacteristiсData {
 		this.alcoholVolume = alcoholVolume;
 	}
 
-	/* (non-Javadoc)
-	 * @see java.lang.Object#toString()
-	 */
 	@Override
 	public String toString() {
-		return super.toString() + "AlсoholBeverageСharacteristiсData [alcoholVolume=" + alcoholVolume + "]";
+		return super.toString() + " " + "AlсoholBeverageСharacteristiсData [alcoholVolume=" + alcoholVolume + "]";
 	}
 
-	/* (non-Javadoc)
-	 * @see java.lang.Object#hashCode()
-	 */
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -68,9 +62,6 @@ public class AlсoholBeverageСharacteristiсData extends СharacteristiсData {
 		return result;
 	}
 
-	/* (non-Javadoc)
-	 * @see java.lang.Object#equals(java.lang.Object)
-	 */
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)

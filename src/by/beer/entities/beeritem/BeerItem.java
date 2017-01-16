@@ -7,7 +7,7 @@ import by.beer.entities.beeritem.beerdata.chars.СharacteristiсData;
 /**
  * Class {@code BeerItem} desribes a beer {@code object} with features.
  * 
- * @author Дмитрий
+ * @author Дмитрий Зяблов
  *
  */
 public class BeerItem {
@@ -113,18 +113,12 @@ public class BeerItem {
 		this.charsData = charsData;
 	}
 
-	/* (non-Javadoc)
-	 * @see java.lang.Object#toString()
-	 */
 	@Override
 	public String toString() {
 		return "BeerItem [beerId=" + beerId + ", brandData=" + brandData + ", chemicalComposition="
 				+ chemicalComposition + ", alcoholBeerType=" + alcoholBeerType + ", charsData=" + charsData + "]";
 	}
 
-	/* (non-Javadoc)
-	 * @see java.lang.Object#hashCode()
-	 */
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -137,9 +131,6 @@ public class BeerItem {
 		return result;
 	}
 
-	/* (non-Javadoc)
-	 * @see java.lang.Object#equals(java.lang.Object)
-	 */
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)

@@ -3,7 +3,7 @@ package by.beer.entities.beeritem.beerdata.chars;
 /**
  * Class {@code PackageType} provides information about beer package.
  * 
- * @author Дмитрий
+ * @author Дмитрий Зяблов
  *
  */
 public class PackageType {
@@ -47,17 +47,11 @@ public class PackageType {
 		this.packageMaterial = packageMaterial;
 	}
 
-	/* (non-Javadoc)
-	 * @see java.lang.Object#toString()
-	 */
 	@Override
 	public String toString() {
 		return "PackageType [packageCapacity=" + packageCapacity + ", packageMaterial=" + packageMaterial + "]";
 	}
 
-	/* (non-Javadoc)
-	 * @see java.lang.Object#hashCode()
-	 */
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -67,9 +61,6 @@ public class PackageType {
 		return result;
 	}
 
-	/* (non-Javadoc)
-	 * @see java.lang.Object#equals(java.lang.Object)
-	 */
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -88,7 +79,5 @@ public class PackageType {
 			return false;
 		return true;
 	}
-	
-	
 
 }

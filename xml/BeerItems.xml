@@ -16,7 +16,7 @@
 		<chars alcohol-volume="4.8">
 			<beer-clarity>11</beer-clarity>
 			<is-filtered>true</is-filtered>
-			<food-value>42</food-value>
+			<food-value>40</food-value>
 			<packaging-type>
 				<package-capacity>0.5</package-capacity>
 				<package-material>glass</package-material>
@@ -39,7 +39,7 @@
 		<chars alcohol-volume="4.6">
 			<beer-clarity>11</beer-clarity>
 			<is-filtered>true</is-filtered>
-			<food-value>42</food-value>
+			<food-value>39</food-value>
 			<packaging-type>
 				<package-capacity>0.5</package-capacity>
 				<package-material>glass</package-material>

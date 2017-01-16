@@ -4,7 +4,7 @@ package by.beer.entities.beeritem.beerdata;
  * Class {@code ChemicalComponentsComposition} includes all infrormation about
  * chemical elent's capacity at a {@code BeerItem} object.
  * 
- * @author Дмитрий
+ * @author Дмитрий Зяблов
  *
  */
 public class ChemicalComponentsComposition {
@@ -79,9 +79,6 @@ public class ChemicalComponentsComposition {
 		this.yeastСapacity = yeastСapacity;
 	}
 
-	/* (non-Javadoc)
-	 * @see java.lang.Object#toString()
-	 */
 	@Override
 	public String toString() {
 		return "ChemicalComponentsComposition [waterСapacity=" + waterСapacity + ", sugarСapacity=" + sugarСapacity
@@ -89,9 +86,6 @@ public class ChemicalComponentsComposition {
 				+ "]";
 	}
 
-	/* (non-Javadoc)
-	 * @see java.lang.Object#hashCode()
-	 */
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -104,9 +98,6 @@ public class ChemicalComponentsComposition {
 		return result;
 	}
 
-	/* (non-Javadoc)
-	 * @see java.lang.Object#equals(java.lang.Object)
-	 */
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)

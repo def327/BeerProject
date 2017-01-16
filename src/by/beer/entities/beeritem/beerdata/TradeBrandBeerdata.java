@@ -4,7 +4,7 @@ package by.beer.entities.beeritem.beerdata;
  * Class {@code TradeBrandBeerdata} includes information about trandmark, beer's
  * name and sort of beer for {@code BeerItem} class.
  *
- * @author Дмитрий
+ * @author Дмитрий Зяблов
  * 
  * @see by.beer.entities.beeritem.BeerItem
  *
@@ -70,18 +70,12 @@ public class TradeBrandBeerdata {
 		this.sortBeerType = sortBeerType;
 	}
 
-	/* (non-Javadoc)
-	 * @see java.lang.Object#toString()
-	 */
 	@Override
 	public String toString() {
 		return "TradeBrandBeerdata [beerName=" + beerName + ", manufacturerBeerName=" + manufacturerBeerName
 				+ ", sortBeerType=" + sortBeerType + "]";
 	}
 
-	/* (non-Javadoc)
-	 * @see java.lang.Object#hashCode()
-	 */
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -92,9 +86,6 @@ public class TradeBrandBeerdata {
 		return result;
 	}
 
-	/* (non-Javadoc)
-	 * @see java.lang.Object#equals(java.lang.Object)
-	 */
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)

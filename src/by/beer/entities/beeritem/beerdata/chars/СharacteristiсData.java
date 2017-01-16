@@ -4,7 +4,7 @@ package by.beer.entities.beeritem.beerdata.chars;
  * Class {@code СharacteristiсData} provides production technologies's
  * information about {@code BeerItem} class.
  * 
- * @author Дмитрий
+ * @author Дмитрий Зяблов
  * 
  * @see by.beer.entities.beeritem.BeerItem
  *
@@ -74,7 +74,7 @@ public abstract class СharacteristiсData {
 		this.isFiltered = isFiltered;
 	}
 
-	public double getFoodValue() {
+	public float getFoodValue() {
 		return foodValue;
 	}
 
@@ -90,18 +90,12 @@ public abstract class СharacteristiсData {
 		this.packageType = packageType;
 	}
 
-	/* (non-Javadoc)
-	 * @see java.lang.Object#toString()
-	 */
 	@Override
 	public String toString() {
 		return "СharacteristiсData [beerClarity=" + beerClarity + ", isFiltered=" + isFiltered + ", foodValue="
 				+ foodValue + ", packageType=" + packageType + "]";
 	}
 
-	/* (non-Javadoc)
-	 * @see java.lang.Object#hashCode()
-	 */
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -113,9 +107,6 @@ public abstract class СharacteristiсData {
 		return result;
 	}
 
-	/* (non-Javadoc)
-	 * @see java.lang.Object#equals(java.lang.Object)
-	 */
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -138,7 +129,5 @@ public abstract class СharacteristiсData {
 			return false;
 		return true;
 	}
-	
-	
 
 }
