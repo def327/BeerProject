@@ -2,6 +2,8 @@ package by.beer.menu.comands;
 
 import java.util.Scanner;
 
+import by.beer.entities.beeritem.manager.ManagerBeerItem;
+
 /**
  * Class {@code ReceiverExitProgram} realizes a user command to exit the
  * program.
@@ -15,8 +17,6 @@ public class ReceiverExitProgram extends Receiver {
 
 	/**
 	 * Exit the program.
-	 * 
-	 * {@link Receiveriable#action() action()}
 	 * 
 	 */
 	@Override
@@ -36,11 +36,12 @@ public class ReceiverExitProgram extends Receiver {
 	 * 
 	 * @param consoleScaner
 	 *            - a input stream for console.
+	 * @param manager
+	 *            - a storage for a list of {@code BeerItem} objects.
 	 * 
 	 */
-	public ReceiverExitProgram(Scanner consoleScaner) {
-		super(consoleScaner);
-		// TODO Auto-generated constructor stub
+	public ReceiverExitProgram(Scanner consoleScaner, ManagerBeerItem manager) {
+		super(consoleScaner, manager);
 	}
 
 }

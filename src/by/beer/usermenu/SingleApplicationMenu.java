@@ -2,6 +2,7 @@ package by.beer.usermenu;
 
 import java.util.Scanner;
 
+import by.beer.entities.beeritem.manager.ManagerBeerItem;
 import by.beer.entities.interfaces.Commandable;
 import by.beer.entities.interfaces.Receiveriable;
 import by.beer.menu.comands.Command;
@@ -29,11 +30,14 @@ public class SingleApplicationMenu {
 	 */
 	public void runAppMenu() {
 
-		// Create only one Scanner object for a whole menu
+		// Creates only one Scanner object for a whole menu
 		Scanner inReader = new Scanner(System.in);
 
-		// Create an invoker for commands to execute
+		// Creates an invoker for commands to execute
 		Invoker commandInvoker = new Invoker();
+
+		// Storages and manages a list of BeerItem objects
+		ManagerBeerItem manager = new ManagerBeerItem();
 
 		while (true) {
 			try {
@@ -47,7 +51,7 @@ public class SingleApplicationMenu {
 				switch (comandAction) {
 				case "1": {
 
-					Receiveriable receiver = new ReceiverLoadBeerItemsFromXML(inReader);
+					Receiveriable receiver = new ReceiverLoadBeerItemsFromXML(inReader, manager);
 					this.setCommandToExecute(commandInvoker, receiver);
 					commandInvoker.executeCommand();
 
@@ -56,7 +60,7 @@ public class SingleApplicationMenu {
 
 				case "2": {
 
-					Receiveriable receiver = new ReceiverShowSortedBeerItemList(inReader);
+					Receiveriable receiver = new ReceiverShowSortedBeerItemList(inReader, manager);
 					this.setCommandToExecute(commandInvoker, receiver);
 					commandInvoker.executeCommand();
 
@@ -65,7 +69,7 @@ public class SingleApplicationMenu {
 
 				case "3": {
 
-					Receiveriable receiver = new ReceiverExitProgram(inReader);
+					Receiveriable receiver = new ReceiverExitProgram(inReader, manager);
 					this.setCommandToExecute(commandInvoker, receiver);
 					commandInvoker.executeCommand();
 
@@ -115,7 +119,6 @@ public class SingleApplicationMenu {
 	 * Default constructor for {@code SingleApplicationMenuFactory}
 	 */
 	private SingleApplicationMenu() {
-
 	}
 
 }

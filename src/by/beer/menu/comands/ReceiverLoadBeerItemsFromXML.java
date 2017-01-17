@@ -1,11 +1,19 @@
 package by.beer.menu.comands;
 
+import java.util.List;
 import java.util.Scanner;
 
 import by.beer.entities.beeritem.BeerItem;
+import by.beer.entities.beeritem.manager.ManagerBeerItem;
+import by.beer.xml.parsers.builders.AbstractBeerItemsBuilder;
+import by.beer.xml.parsers.builders.BeerItemsDOMBuilder;
+import by.beer.xml.parsers.builders.BeerItemsSAXBuilder;
+import by.beer.xml.parsers.builders.BeerItemsStaxBuilder;
 import by.beeritems.xml.parsers.stax.StAXBeerItemsParser;
 import by.beeritems.xml.parsers.sax.SAXBeerItemsParser;
 import by.beeritems.xml.parsers.dom.DOMBeerItemsParser;
+
+import static by.beer.menu.enums.PathToXMLDocument.*;
 
 /**
  * Class {@code ReceiverLoadBeerItemsFromXML} realizes a user command to load
@@ -25,9 +33,58 @@ import by.beeritems.xml.parsers.dom.DOMBeerItemsParser;
  */
 public class ReceiverLoadBeerItemsFromXML extends Receiver {
 
+	/**
+	 * Load {@code BeerItem} objects from XML file document.
+	 */
 	@Override
 	public void action() {
-		System.out.println("Load from XML");
+
+		AbstractBeerItemsBuilder builderBeerItem;
+		while (true) {
+			try {
+				System.out.println("Choose a type of parser: ");
+				System.out.println("1 - StAx");
+				System.out.println("2 - SAX");
+				System.out.println("3 - DOM");
+
+				String comandAction = this.consoleScaner.nextLine();
+
+				switch (comandAction) {
+				case "1": {
+					System.out.println("-- StAX -- parsing --");
+					builderBeerItem = new BeerItemsStaxBuilder();
+					return;
+				}
+
+				case "2": {
+					System.out.println("-- SAX -- parsing --");
+					builderBeerItem = new BeerItemsSAXBuilder();
+					this.manager.setListBeerItem(
+							(List<BeerItem>) builderBeerItem.buildListBeerItems(PATH_TO_XML_DOCUMENT.toString()));
+					return;
+				}
+
+				case "3": {
+					System.out.println("-- DOM -- parsing --");
+					builderBeerItem = new BeerItemsDOMBuilder();
+					this.manager.setListBeerItem(
+							(List<BeerItem>) builderBeerItem.buildListBeerItems(PATH_TO_XML_DOCUMENT.toString()));
+					return;
+				}
+
+				default: {
+					System.out.println("Try again");
+					// Ask user again
+					continue;
+				}
+				}
+			} catch (IllegalArgumentException e) {
+				System.out.println("Try again");
+				// Ask user again
+				continue;
+			}
+
+		}
 
 	}
 
@@ -37,10 +94,11 @@ public class ReceiverLoadBeerItemsFromXML extends Receiver {
 	 * 
 	 * @param consoleScaner
 	 *            - a input stream for console.
-	 * 
+	 * @param manager
+	 *            - a storage for a list of {@code BeerItem} objects.
 	 */
-	public ReceiverLoadBeerItemsFromXML(Scanner consoleScaner) {
-		super(consoleScaner);
+	public ReceiverLoadBeerItemsFromXML(Scanner consoleScaner, ManagerBeerItem manager) {
+		super(consoleScaner, manager);
 	}
 
 }
