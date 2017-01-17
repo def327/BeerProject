@@ -22,7 +22,7 @@ import by.beeritems.xml.parsers.stax.StAXBeerItemsParser;
  * parsers.
  * 
  * 
- * @author Дмитрий Зяблов
+ * @author Dmitry Zyablov
  * 
  * @see BeerItem
  * 

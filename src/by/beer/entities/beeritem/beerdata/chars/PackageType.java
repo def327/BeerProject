@@ -3,7 +3,7 @@ package by.beer.entities.beeritem.beerdata.chars;
 /**
  * Class {@code PackageType} provides information about beer package.
  * 
- * @author Дмитрий Зяблов
+ * @author Dmitry Zyablov
  *
  */
 public class PackageType {

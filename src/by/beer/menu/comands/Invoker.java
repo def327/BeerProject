@@ -5,7 +5,7 @@ import by.beer.entities.interfaces.Commandable;
 /**
  * Class {@code Invoker} holds a {@code Commandable} object to execute.
  * 
- * @author Дмитрий Зяблов
+ * @author Dmitry Zyablov
  * @see Commandable
  *
  */

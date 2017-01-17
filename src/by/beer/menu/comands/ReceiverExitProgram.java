@@ -9,7 +9,7 @@ import by.beer.resources.ResourceBundleManager;
  * Class {@code ReceiverExitProgram} realizes a user command to exit the
  * program.
  * 
- * @author Дмитрий Зяблов
+ * @author Dmitry Zyablov
  * 
  * @see Receiver
  *

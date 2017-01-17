@@ -1,6 +1,4 @@
-/**
- * 
- */
+
 package by.beer.entities.beeritem.beerdata.chars;
 
 /**
@@ -9,7 +7,7 @@ package by.beer.entities.beeritem.beerdata.chars;
  * information about {@code BeerItem} class, which has an alcohol.
  * 
  * 
- * @author Дмитрий Зяблов
+ * @author Dmitry Zyablov
  * 
  * @see СharacteristiсData
  *
@@ -25,7 +23,6 @@ public class AlсoholBeverageСharacteristiсData extends СharacteristiсData {
 	 * 
 	 */
 	public AlсoholBeverageСharacteristiсData() {
-		super();
 		this.alcoholVolume = 0;
 	}
 

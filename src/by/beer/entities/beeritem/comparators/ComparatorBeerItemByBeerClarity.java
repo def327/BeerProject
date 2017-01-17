@@ -11,7 +11,7 @@ import by.beer.entities.beeritem.BeerItem;
  * @version 1.0
  * @since 2016
  * 
- * @author Дмитрий Зяблов
+ * @author Dmitry Zyablov
  *
  */
 public class ComparatorBeerItemByBeerClarity implements Comparator<Object> {

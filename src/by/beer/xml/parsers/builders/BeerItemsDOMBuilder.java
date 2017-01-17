@@ -23,7 +23,7 @@ import by.beeritems.xml.parsers.dom.DOMBeerItemsParser;
  * buildListBeerItems()}method.
  * 
  * 
- * @author Дмитрий Зяблов
+ * @author Dmitry Zyablov
  * 
  * @see BeerItem
  * 

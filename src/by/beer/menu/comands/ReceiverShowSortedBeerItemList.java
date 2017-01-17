@@ -16,7 +16,7 @@ import by.beer.resources.ResourceBundleManager;
  * {@code BeerItem} objects in a sorted order.
  * 
  * 
- * @author Дмитрий Зяблов
+ * @author Dmitry Zyablov
  * 
  * @see BeerItem
  * 

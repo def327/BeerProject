@@ -16,7 +16,7 @@ import by.beer.entities.beeritem.beerdata.chars.СharacteristiсData;
  * document with information for {@code BeerItem} objects. Also provides methods
  * to initialize the fields for {@code BeerItem} objects.
  * 
- * @author Дмитрий Зяблов
+ * @author Dmitry Zyablov
  * 
  * @see BeerItem
  *

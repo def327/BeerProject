@@ -10,7 +10,7 @@ import by.beer.entities.beeritem.beerdata.ChemicalComponentsComposition;
  * Class {@code BeerChemicalCompositionParser} provides method to parse
  * {@code ChemicalComponentsComposition} field for{@code BeerItem} object.
  * 
- * @author Дмитрий Зяблов
+ * @author Dmitry Zyablov
  * 
  * @see BeerItem
  * @see ChemicalComponentsComposition

@@ -11,7 +11,7 @@ import by.beer.entities.beeritem.beerdata.chars.СharacteristiсData;
  * Class {@code BeerCharsDataParser} provides method to parse
  * {@code СharacteristiсData} field for{@code BeerItem} object.
  * 
- * @author Дмитрий Зяблов
+ * @author Dmitry Zyablov
  * 
  * @see BeerItem
  * @see СharacteristiсData

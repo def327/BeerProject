@@ -4,7 +4,7 @@ package by.beer.entities.beeritem.beerdata;
  * Class {@code ChemicalComponentsComposition} includes all infrormation about
  * chemical elent's capacity at a {@code BeerItem} object.
  * 
- * @author Дмитрий Зяблов
+ * @author Dmitry Zyablov
  *
  */
 public class ChemicalComponentsComposition {

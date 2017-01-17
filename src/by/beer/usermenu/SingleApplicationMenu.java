@@ -16,7 +16,7 @@ import by.beer.resources.ResourceBundleManager;
  * Class {@code SingleApplicationMenuFactory} represents a menu for user via
  * console.
  * 
- * @author Дмитрий Зяблов
+ * @author Dmitry Zyablov
  *
  */
 public class SingleApplicationMenu {

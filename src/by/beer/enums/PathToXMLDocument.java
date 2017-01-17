@@ -3,7 +3,7 @@ package by.beer.enums;
 /**
  * Enum {@code PathToXMLDocument} holds a path to XML document in file system.
  * 
- * @author Дмитрий Зяблов
+ * @author Dmitry Zyablov
  * @version 1.0
  * @since 2016
  * 

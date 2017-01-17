@@ -6,7 +6,7 @@ package by.beer.entities.beeritem.beerdata.chars;
  * information about {@code BeerItem} class, which hasn't hava an alcohol.
  * 
  * 
- * @author Дмитрий Зяблов
+ * @author Dmitry Zyablov
  * 
  * @see СharacteristiсData
  *

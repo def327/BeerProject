@@ -4,7 +4,7 @@ package by.beer.entities.beeritem.beerdata.chars;
  * Class {@code СharacteristiсData} provides production technologies's
  * information about {@code BeerItem} class.
  * 
- * @author Дмитрий Зяблов
+ * @author Dmitry Zyablov
  * 
  * @see by.beer.entities.beeritem.BeerItem
  *

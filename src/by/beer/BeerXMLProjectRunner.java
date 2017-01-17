@@ -10,7 +10,7 @@ import by.beer.usermenu.SingleApplicationMenu;
  * "BeerXMLProject" program is a console application, where user can load data
  * from XML file about beer items by parsers: StAX, SAX and DOM.
  * 
- * @author Дмитрий Зяблов
+ * @author Dmitry Zyablov
  * @version 1.0
  * @since 2016
  */

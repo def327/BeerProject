@@ -10,7 +10,7 @@ import by.beer.entities.beeritem.beerdata.chars.PackageType;
  * {@code PackageType} field for {@code СharacteristiсData} field of
  * {@code BeerItem} object.
  * 
- * @author Дмитрий Зяблов
+ * @author Dmitry Zyablov
  * 
  * @see BeerItem
  * @see СharacteristiсData

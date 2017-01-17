@@ -10,7 +10,7 @@ import by.beer.entities.beeritem.beerdata.TradeBrandBeerdata;
  * Class {@code BeerBrandDataParser} provides method to parse
  * {@code TradeBrandBeerdata} field for{@code BeerItem} object.
  * 
- * @author Дмитрий Зяблов
+ * @author Dmitry Zyablov
  * 
  * @see BeerItem
  * @see TradeBrandBeerdata

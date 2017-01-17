@@ -8,7 +8,7 @@ import by.beer.entities.interfaces.Receiveriable;
 /**
  * Class {@code Receiver} realizes a user command.
  * 
- * @author Дмитрий Зяблов
+ * @author Dmitry Zyablov
  * 
  * @see Receiveriable
  *

@@ -8,7 +8,7 @@ import by.beer.entities.beeritem.BeerItem;
  * Compares {@code BeerItem} objects by their food value field.
  * 
  * 
- * @author Дмитрий Зяблов
+ * @author Dmitry Zyablov
  *
  */
 public class ComparatorBeerItemByFoodValue implements Comparator<Object> {

@@ -7,7 +7,7 @@ import org.w3c.dom.NodeList;
  * Class {@code XMLDocumentChildElement} provides method to get a child element
  * from XML document by it's name and parent element object.
  * 
- * @author Дмитрий Зяблов
+ * @author Dmitry Zyablov
  * 
  *
  */

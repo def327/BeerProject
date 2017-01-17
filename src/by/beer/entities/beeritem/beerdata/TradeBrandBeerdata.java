@@ -4,7 +4,7 @@ package by.beer.entities.beeritem.beerdata;
  * Class {@code TradeBrandBeerdata} includes information about trandmark, beer's
  * name and sort of beer for {@code BeerItem} class.
  *
- * @author Дмитрий Зяблов
+ * @author Dmitry Zyablov
  * 
  * @see by.beer.entities.beeritem.BeerItem
  *

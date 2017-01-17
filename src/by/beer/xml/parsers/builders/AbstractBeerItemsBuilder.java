@@ -10,7 +10,7 @@ import by.beer.entities.beeritem.BeerItem;
  * Class {@code AbstractBeerItemsBuilder} provides method to create a list of
  * {@code BeerItem} objects.
  * 
- * @author Дмитрий Зяблов
+ * @author Dmitry Zyablov
  * 
  * @see BeerItem
  *

@@ -11,7 +11,7 @@ import java.util.ResourceBundle;
  * Class {@code ResourceBundleManager} provides methods to get an inizialized
  * {@code ResourceBundle} object and get the properties.
  * 
- * @author Дмитрий Зяблов
+ * @author Dmitry Zyablov
  *
  */
 public class ResourceBundleManager {

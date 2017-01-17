@@ -7,7 +7,7 @@ import by.beer.entities.interfaces.Receiveriable;
  * CLass {@code Command} provides method to execute commands from user.
  *
  * 
- * @author Дмитрий Зяблов
+ * @author Dmitry Zyablov
  * 
  * @see Commandable
  *

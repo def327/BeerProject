@@ -7,7 +7,7 @@ import by.beer.entities.beeritem.beerdata.chars.СharacteristiсData;
 /**
  * Class {@code BeerItem} desribes a beer {@code object} with features.
  * 
- * @author Дмитрий Зяблов
+ * @author Dmitry Zyablov
  *
  */
 public class BeerItem {
@@ -17,7 +17,7 @@ public class BeerItem {
 	 * of a new {@code BeerItem} boject.
 	 * 
 	 * 
-	 * @author Дмитрий Зяблов
+	 * @author Dmitry Zyablov
 	 *
 	 */
 	public static class BuilderBeerItem {

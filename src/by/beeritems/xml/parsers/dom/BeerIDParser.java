@@ -9,7 +9,7 @@ import by.beer.entities.beeritem.BeerItem;
  * Class {@code BeerIDParser} provides method to parse beer ID field
  * for{@code BeerItem} object.
  * 
- * @author Дмитрий Зяблов
+ * @author Dmitry Zyablov
  * 
  * @see BeerItem
  *

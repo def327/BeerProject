@@ -9,7 +9,7 @@ import by.beer.entities.beeritem.BeerItem;
  * Class {@code BeerAlcoholTypeParser} provides method to parse alcohol type
  * field for{@code BeerItem} object.
  * 
- * @author Дмитрий Зяблов
+ * @author Dmitry Zyablov
  * 
  * @see BeerItem
  *
