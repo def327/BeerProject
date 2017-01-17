@@ -7,6 +7,9 @@ import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 
 import by.beer.entities.beeritem.BeerItem;
+import by.beer.entities.beeritem.beerdata.ChemicalComponentsComposition;
+import by.beer.entities.beeritem.beerdata.TradeBrandBeerdata;
+import by.beer.entities.beeritem.beerdata.chars.СharacteristiсData;
 
 /**
  * Class {@code DOMBeerItemsParser} provides method to parse and transfer an XML
@@ -43,6 +46,7 @@ public class DOMBeerItemsParser {
 
 			// Add a new BeerItem object to list of BeerItem objects
 			beerItemList.add(beerItem);
+
 		}
 
 		return beerItemList;
@@ -57,19 +61,29 @@ public class DOMBeerItemsParser {
 	 *            data to initialize a new {@code BeerItem} object.
 	 * 
 	 * @return a new {@code BeerItem} object
+	 * 
+	 * @see BeerItem.BuilderBeerItem
 	 */
 	private static BeerItem buildBeerItem(Element beerItemElement) {
 
-		BeerItem beerItem = new BeerItem();
+		/*
+		 * Get all necessary data to initialize all fields of a new BeerItem
+		 * object
+		 * 
+		 */
+		int beerId = BeerIDParser.getParsedBeerID(beerItemElement);
+		TradeBrandBeerdata beerBrandData = BeerBrandDataParser.getParsedBeerBrandData(beerItemElement);
+		ChemicalComponentsComposition beerChemicalComposition = BeerChemicalCompositionParser
+				.getParsedBeerChemicalComposition(beerItemElement);
+		String beerAlcoholType = BeerAlcoholTypeParser.getParsedBeerAlcoholType(beerItemElement);
+		СharacteristiсData beerCharsData = BeerCharsDataParser.getParsedBeerChars(beerItemElement);
 
-		beerItem.setBeerId(BeerIDParser.getParsedBeerID(beerItemElement));
-		beerItem.setBrandData(BeerBrandDataParser.getParsedBeerBrandData(beerItemElement));
-		beerItem.setChemicalComposition(
-				BeerChemicalCompositionParser.getParsedBeerChemicalComposition(beerItemElement));
-		beerItem.setAlcoholBeerType(BeerAlcoholTypeParser.getParsedBeerAlcoholType(beerItemElement));
-		beerItem.setCharsData(BeerCharsDataParser.getParsedBeerChars(beerItemElement));
+		// Initializing fields of a new BeerItem by inner Class
+		BeerItem newBeerItem = new BeerItem.BuilderBeerItem().beerId(beerId).brandData(beerBrandData)
+				.chemicalComposition(beerChemicalComposition).alcoholBeerType(beerAlcoholType).charsData(beerCharsData)
+				.newInstance();
 
-		return beerItem;
+		return newBeerItem;
 	}
 
 	private DOMBeerItemsParser() {

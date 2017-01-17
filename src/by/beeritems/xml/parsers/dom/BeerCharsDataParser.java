@@ -2,7 +2,6 @@ package by.beeritems.xml.parsers.dom;
 
 import org.w3c.dom.DOMException;
 import org.w3c.dom.Element;
-
 import by.beer.entities.beeritem.BeerItem;
 import by.beer.entities.beeritem.beerdata.chars.AlсoholBeverageСharacteristiсData;
 import by.beer.entities.beeritem.beerdata.chars.SoftBeverageСharacteristiсData;
@@ -115,7 +114,12 @@ public class BeerCharsDataParser {
 
 		Element elemChars = XMLDocumentChildElement.getChildElement(beerItemElement, "chars");
 
-		if (elemChars.hasAttribute("alcohol-volume")) {
+		if (!(elemChars.hasAttributes())) {
+
+			SoftBeverageСharacteristiсData softBeverageCharsData = new SoftBeverageСharacteristiсData();
+			return softBeverageCharsData;
+
+		} else {
 
 			float beerAlcoholVolume = Float.parseFloat(elemChars.getAttribute("alcohol-volume"));
 			AlсoholBeverageСharacteristiсData alсoholBeverageCharsData = new AlсoholBeverageСharacteristiсData();
@@ -124,10 +128,6 @@ public class BeerCharsDataParser {
 
 			return alсoholBeverageCharsData;
 
-		} else {
-
-			SoftBeverageСharacteristiсData softBeverageCharsData = new SoftBeverageСharacteristiсData();
-			return softBeverageCharsData;
 		}
 
 	}

@@ -13,6 +13,63 @@ import by.beer.entities.beeritem.beerdata.chars.СharacteristiсData;
 public class BeerItem {
 
 	/**
+	 * Inner static class {@code BuilderBeerItem} initializes fileds and builds
+	 * of a new {@code BeerItem} boject.
+	 * 
+	 * 
+	 * @author Дмитрий Зяблов
+	 *
+	 */
+	public static class BuilderBeerItem {
+
+		/**
+		 * A new {@code BeerItem} object.
+		 */
+		private BeerItem beerItemObject;
+
+		public BuilderBeerItem() {
+			this.beerItemObject = new BeerItem();
+		}
+
+		public BuilderBeerItem beerId(int beerId) {
+			beerItemObject.beerId = beerId;
+			return this;
+		}
+
+		public BuilderBeerItem brandData(TradeBrandBeerdata brandData) {
+			beerItemObject.brandData = brandData;
+			return this;
+		}
+
+		public BuilderBeerItem chemicalComposition(ChemicalComponentsComposition chemicalComposition) {
+			beerItemObject.chemicalComposition = chemicalComposition;
+			return this;
+		}
+
+		public BuilderBeerItem alcoholBeerType(String alcoholBeerType) {
+			beerItemObject.alcoholBeerType = alcoholBeerType;
+			return this;
+		}
+
+		public BuilderBeerItem charsData(СharacteristiсData charsData) {
+			beerItemObject.charsData = charsData;
+			return this;
+		}
+
+		/**
+		 * Return's a new {@code BeerItem} object with all initializes fileds .
+		 * 
+		 * @return {@code BeerItem} object.
+		 */
+		public BeerItem newInstance() {
+			BeerItem newImmutableBeerItemObject = beerItemObject;
+			beerItemObject = new BeerItem();
+			return newImmutableBeerItemObject;
+		}
+
+	}
+
+	/**
 	 * {@code BeerItem} object's unuqiue ID
 	 */
 	private int beerId;
