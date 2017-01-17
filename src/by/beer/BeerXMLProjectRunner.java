@@ -30,7 +30,6 @@ public class BeerXMLProjectRunner {
 	 * 
 	 */
 	public static void main(String[] args) {
-
 		SingleApplicationMenu menu = SingleApplicationMenu.getInstance();
 		menu.runAppMenu();
 	}

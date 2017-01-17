@@ -1,5 +1,7 @@
 package by.beer.menu.comands;
 
+import static by.beer.enums.PathToXMLDocument.*;
+
 import java.util.List;
 import java.util.Scanner;
 
@@ -12,8 +14,6 @@ import by.beer.xml.parsers.builders.BeerItemsStaxBuilder;
 import by.beeritems.xml.parsers.stax.StAXBeerItemsParser;
 import by.beeritems.xml.parsers.sax.SAXBeerItemsParser;
 import by.beeritems.xml.parsers.dom.DOMBeerItemsParser;
-
-import static by.beer.menu.enums.PathToXMLDocument.*;
 
 /**
  * Class {@code ReceiverLoadBeerItemsFromXML} realizes a user command to load
@@ -53,6 +53,8 @@ public class ReceiverLoadBeerItemsFromXML extends Receiver {
 				case "1": {
 					System.out.println("-- StAX -- parsing --");
 					builderBeerItem = new BeerItemsStaxBuilder();
+					this.manager.setListBeerItem(
+							(List<BeerItem>) builderBeerItem.buildListBeerItems(PATH_TO_XML_DOCUMENT.toString()));
 					return;
 				}
 

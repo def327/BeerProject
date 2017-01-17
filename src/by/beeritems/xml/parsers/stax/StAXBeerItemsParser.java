@@ -21,8 +21,9 @@ import by.beer.entities.beeritem.beerdata.chars.PackageType;
 import by.beer.entities.beeritem.beerdata.chars.SoftBeverageСharacteristiсData;
 
 /**
- * Class {@code StAXBeerItemsParser} provides methods to parse and transfer an XML document with information for {@code BeerItem} objects 
- * Also provides methods to initialize the fields for {@code BeerItem} objects
+ * Class {@code StAXBeerItemsParser} provides methods to parse and transfer an
+ * XML document with information for {@code BeerItem} objects Also provides
+ * methods to initialize the fields for {@code BeerItem} objects
  * 
  * @author Igor Shurupov
  */
@@ -38,7 +39,7 @@ public class StAXBeerItemsParser {
 	public StAXBeerItemsParser() {
 		inputFactory = XMLInputFactory.newInstance();
 	}
-	
+
 	/**
 	 * Returns a list of {@code BeerItem} objects from parsed XML document
 	 * 
@@ -51,7 +52,8 @@ public class StAXBeerItemsParser {
 	/**
 	 * Builds a list of {@code BeerItem} objects from parsed XML document
 	 * 
-	 * @param fileName - is XML document
+	 * @param fileName
+	 *            - is XML document
 	 */
 	public void buildListBeerItems(String fileName) {
 		FileInputStream inputStream = null;
@@ -86,9 +88,11 @@ public class StAXBeerItemsParser {
 	}
 
 	/**
-	 * Returns an initialized {@code BeerItem} object by data from parsed XML document
+	 * Returns an initialized {@code BeerItem} object by data from parsed XML
+	 * document
 	 * 
-	 * @param reader - an XMLStreamReader object
+	 * @param reader
+	 *            - an XMLStreamReader object
 	 * 
 	 * @return a new {@code BeerItem} object
 	 */
@@ -142,9 +146,11 @@ public class StAXBeerItemsParser {
 	}
 
 	/**
-	 * Returns an initialized {@code ChemicalComponentsComposition} object by data from parsed XML document
+	 * Returns an initialized {@code ChemicalComponentsComposition} object by
+	 * data from parsed XML document
 	 * 
-	 * @param reader - an XMLStreamReader object
+	 * @param reader
+	 *            - an XMLStreamReader object
 	 * 
 	 * @return a new {@code ChemicalComponentsComposition} object
 	 * 
@@ -192,9 +198,11 @@ public class StAXBeerItemsParser {
 	}
 
 	/**
-	 * Returns an initialized {@code AlcoholBeverageCharacteristicData} object by data from parsed XML document
+	 * Returns an initialized {@code AlcoholBeverageCharacteristicData} object
+	 * by data from parsed XML document
 	 * 
-	 * @param reader - an XMLStreamReader object
+	 * @param reader
+	 *            - an XMLStreamReader object
 	 * 
 	 * @return a new {@code AlcoholBeverageCharacteristicData} object
 	 * 
@@ -240,9 +248,11 @@ public class StAXBeerItemsParser {
 	}
 
 	/**
-	 * Returns an initialized {@code SoftBeverageCharacteristicData} object by data from parsed XML document
+	 * Returns an initialized {@code SoftBeverageCharacteristicData} object by
+	 * data from parsed XML document
 	 * 
-	 * @param reader - an XMLStreamReader object
+	 * @param reader
+	 *            - an XMLStreamReader object
 	 * 
 	 * @return a new {@code SoftBeverageCharacteristicData} object
 	 * 
@@ -287,9 +297,11 @@ public class StAXBeerItemsParser {
 	}
 
 	/**
-	 * Returns an initialized {@code PackageType} object by data from parsed XML document
+	 * Returns an initialized {@code PackageType} object by data from parsed XML
+	 * document
 	 * 
-	 * @param reader - an XMLStreamReader object
+	 * @param reader
+	 *            - an XMLStreamReader object
 	 * 
 	 * @return a new {@code PackageType} object
 	 * 
@@ -325,11 +337,12 @@ public class StAXBeerItemsParser {
 		}
 		throw new XMLStreamException("Unknown element in tag Packaging Type");
 	}
-	
+
 	/**
 	 * Returns text from parsed XML file
 	 * 
-	 * @param reader - an XMLStreamReader object
+	 * @param reader
+	 *            - an XMLStreamReader object
 	 * 
 	 * @return text from parsed XML file
 	 * 

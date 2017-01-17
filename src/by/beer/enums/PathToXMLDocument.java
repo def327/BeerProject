@@ -1,4 +1,4 @@
-package by.beer.menu.enums;
+package by.beer.enums;
 
 /**
  * Enum {@code PathToXMLDocument} holds a path to XML document in file system.
