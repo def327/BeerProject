@@ -1,7 +1,7 @@
 
-package by.beer.main;
+package by.beer;
 
-import by.beer.menu.SingleApplicationMenuFactory;
+import by.beer.usermenu.SingleApplicationMenu;
 
 /**
  * 
@@ -26,13 +26,13 @@ public class BeerXMLProjectRunner {
 	 *            Unused.
 	 * @return Nothing
 	 * 
-	 * @see SingleApplicationMenuFactory
+	 * @see SingleApplicationMenu
 	 * 
 	 */
 	public static void main(String[] args) {
 
-		SingleApplicationMenuFactory menu = SingleApplicationMenuFactory.getInstance();
-		menu.run();
+		SingleApplicationMenu menu = SingleApplicationMenu.getInstance();
+		menu.runAppMenu();
 	}
 
 }
