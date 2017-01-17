@@ -7,13 +7,14 @@ import java.util.Scanner;
 
 import by.beer.entities.beeritem.BeerItem;
 import by.beer.entities.beeritem.manager.ManagerBeerItem;
+import by.beer.resources.ResourceBundleManager;
 import by.beer.xml.parsers.builders.AbstractBeerItemsBuilder;
 import by.beer.xml.parsers.builders.BeerItemsDOMBuilder;
 import by.beer.xml.parsers.builders.BeerItemsSAXBuilder;
 import by.beer.xml.parsers.builders.BeerItemsStaxBuilder;
-import by.beeritems.xml.parsers.stax.StAXBeerItemsParser;
-import by.beeritems.xml.parsers.sax.SAXBeerItemsParser;
 import by.beeritems.xml.parsers.dom.DOMBeerItemsParser;
+import by.beeritems.xml.parsers.sax.SAXBeerItemsParser;
+import by.beeritems.xml.parsers.stax.StAXBeerItemsParser;
 
 /**
  * Class {@code ReceiverLoadBeerItemsFromXML} realizes a user command to load
@@ -42,16 +43,13 @@ public class ReceiverLoadBeerItemsFromXML extends Receiver {
 		AbstractBeerItemsBuilder builderBeerItem;
 		while (true) {
 			try {
-				System.out.println("Choose a type of parser: ");
-				System.out.println("1 - StAx");
-				System.out.println("2 - SAX");
-				System.out.println("3 - DOM");
+				System.out.println(ResourceBundleManager.getProperty("mainMenu.load"));
 
 				String comandAction = this.consoleScaner.nextLine();
 
 				switch (comandAction) {
 				case "1": {
-					System.out.println("-- StAX -- parsing --");
+					System.out.println(ResourceBundleManager.getProperty("mainMenu.load.stax"));
 					builderBeerItem = new BeerItemsStaxBuilder();
 					this.manager.setListBeerItem(
 							(List<BeerItem>) builderBeerItem.buildListBeerItems(PATH_TO_XML_DOCUMENT.toString()));
@@ -59,7 +57,7 @@ public class ReceiverLoadBeerItemsFromXML extends Receiver {
 				}
 
 				case "2": {
-					System.out.println("-- SAX -- parsing --");
+					System.out.println(ResourceBundleManager.getProperty("mainMenu.load.sax"));
 					builderBeerItem = new BeerItemsSAXBuilder();
 					this.manager.setListBeerItem(
 							(List<BeerItem>) builderBeerItem.buildListBeerItems(PATH_TO_XML_DOCUMENT.toString()));
@@ -67,7 +65,7 @@ public class ReceiverLoadBeerItemsFromXML extends Receiver {
 				}
 
 				case "3": {
-					System.out.println("-- DOM -- parsing --");
+					System.out.println(ResourceBundleManager.getProperty("mainMenu.load.dom"));
 					builderBeerItem = new BeerItemsDOMBuilder();
 					this.manager.setListBeerItem(
 							(List<BeerItem>) builderBeerItem.buildListBeerItems(PATH_TO_XML_DOCUMENT.toString()));
@@ -75,13 +73,13 @@ public class ReceiverLoadBeerItemsFromXML extends Receiver {
 				}
 
 				default: {
-					System.out.println("Try again");
+					System.out.println(ResourceBundleManager.getProperty("menu.try"));
 					// Ask user again
 					continue;
 				}
 				}
 			} catch (IllegalArgumentException e) {
-				System.out.println("Try again");
+				System.out.println(ResourceBundleManager.getProperty("menu.try"));
 				// Ask user again
 				continue;
 			}

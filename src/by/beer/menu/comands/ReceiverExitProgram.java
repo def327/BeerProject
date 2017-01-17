@@ -3,6 +3,7 @@ package by.beer.menu.comands;
 import java.util.Scanner;
 
 import by.beer.entities.beeritem.manager.ManagerBeerItem;
+import by.beer.resources.ResourceBundleManager;
 
 /**
  * Class {@code ReceiverExitProgram} realizes a user command to exit the
@@ -21,7 +22,7 @@ public class ReceiverExitProgram extends Receiver {
 	 */
 	@Override
 	public void action() {
-		System.out.println("Exit the program!!!");
+		System.out.println(ResourceBundleManager.getProperty("menu.exit"));
 
 		// Close resources
 		consoleScaner.close();

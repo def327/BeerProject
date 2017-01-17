@@ -10,6 +10,7 @@ import by.beer.menu.comands.Invoker;
 import by.beer.menu.comands.ReceiverExitProgram;
 import by.beer.menu.comands.ReceiverLoadBeerItemsFromXML;
 import by.beer.menu.comands.ReceiverShowSortedBeerItemList;
+import by.beer.resources.ResourceBundleManager;
 
 /**
  * Class {@code SingleApplicationMenuFactory} represents a menu for user via
@@ -41,10 +42,8 @@ public class SingleApplicationMenu {
 
 		while (true) {
 			try {
-				System.out.println("Menu started:");
-				System.out.println("1 - Parse BeerItems from XML by StAx, SAX or DOM");
-				System.out.println("2 - Sort and display BeerItems");
-				System.out.println("3 - Exit program");
+
+				System.out.println(ResourceBundleManager.getProperty("mainMenu.message"));
 
 				String comandAction = inReader.nextLine();
 
@@ -77,13 +76,13 @@ public class SingleApplicationMenu {
 				}
 
 				default: {
-					System.out.println("Try again");
+					System.out.println(ResourceBundleManager.getProperty("menu.try"));
 					// Ask user again
 					continue;
 				}
 				}
 			} catch (IllegalArgumentException e) {
-				System.out.println("Try again");
+				System.out.println(ResourceBundleManager.getProperty("menu.try"));
 				// Ask user again
 				continue;
 			}

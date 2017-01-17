@@ -9,6 +9,7 @@ import by.beer.entities.beeritem.BeerItem;
 import by.beer.entities.beeritem.comparators.ComparatorBeerItemByBeerClarity;
 import by.beer.entities.beeritem.comparators.ComparatorBeerItemByFoodValue;
 import by.beer.entities.beeritem.manager.ManagerBeerItem;
+import by.beer.resources.ResourceBundleManager;
 
 /**
  * Class {@code ReceiverShowSortedBeerItemList} realizes a user command to show
@@ -40,15 +41,12 @@ public class ReceiverShowSortedBeerItemList extends Receiver {
 		while (true) {
 			try {
 
-				System.out.println("Choose a type of sorting: ");
-				System.out.println("1 - by beer clarity");
-				System.out.println("2 - by food value");
-
+				System.out.println(ResourceBundleManager.getProperty("mainMenu.sort"));
 				String comandAction = this.consoleScaner.nextLine();
 
 				switch (comandAction) {
 				case "1": {
-					System.out.println("Sorted by beer clarity:");
+					System.out.println(ResourceBundleManager.getProperty("mainMenu.sort.clarity"));
 
 					showSortedBeerItemList(this.manager.getListBeerItem(), new ComparatorBeerItemByBeerClarity());
 
@@ -56,7 +54,7 @@ public class ReceiverShowSortedBeerItemList extends Receiver {
 				}
 
 				case "2": {
-					System.out.println("Sorted by food value");
+					System.out.println(ResourceBundleManager.getProperty("mainMenu.sort.food-value"));
 
 					showSortedBeerItemList(this.manager.getListBeerItem(), new ComparatorBeerItemByFoodValue());
 
@@ -64,13 +62,13 @@ public class ReceiverShowSortedBeerItemList extends Receiver {
 				}
 
 				default: {
-					System.out.println("Try again");
+					System.out.println(ResourceBundleManager.getProperty("menu.try"));
 					// Ask user again
 					continue;
 				}
 				}
 			} catch (IllegalArgumentException e) {
-				System.out.println("Try again");
+				System.out.println(ResourceBundleManager.getProperty("menu.try"));
 				// Ask user again
 				continue;
 			}
