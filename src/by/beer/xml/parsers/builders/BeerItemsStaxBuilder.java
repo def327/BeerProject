@@ -7,7 +7,6 @@ import by.beeritems.xml.parsers.stax.StAXBeerItemsParser;
 
 /**
  * @author Igor Shurupov
- *
  */
 public class BeerItemsStaxBuilder extends AbstractBeerItemsBuilder {
 	
@@ -21,9 +20,9 @@ public class BeerItemsStaxBuilder extends AbstractBeerItemsBuilder {
 
 	@Override
 	public List<BeerItem> buildListBeerItems(String fileName) {
-		StAXBeerItemsParser parser = new StAXBeerItemsParser();
-		parser.buildListBeerItems("BeerItems.xml");
-		return parser.getBeerItems();
+		StAXBeerItemsParser staxParser = new StAXBeerItemsParser();
+		staxParser.buildListBeerItems(fileName);
+		return staxParser.getBeerItems();
 	}
 
 }
