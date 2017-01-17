@@ -21,6 +21,9 @@ import by.beer.entities.beeritem.beerdata.chars.PackageType;
 import by.beer.entities.beeritem.beerdata.chars.SoftBeverageСharacteristiсData;
 
 /**
+ * Class {@code StAXBeerItemsParser} provides methods to parse and transfer an XML document with information for {@code BeerItem} objects 
+ * Also provides methods to initialize the fields for {@code BeerItem} objects
+ * 
  * @author Igor Shurupov
  */
 public class StAXBeerItemsParser {
@@ -35,15 +38,20 @@ public class StAXBeerItemsParser {
 	public StAXBeerItemsParser() {
 		inputFactory = XMLInputFactory.newInstance();
 	}
-
+	
+	/**
+	 * Returns a list of {@code BeerItem} objects from parsed XML document
+	 * 
+	 * @return a list of {@code BeerItem} objects
+	 */
 	public List<BeerItem> getBeerItems() {
 		return beerItems;
 	}
 
 	/**
-	 * This method builds list of beer items
+	 * Builds a list of {@code BeerItem} objects from parsed XML document
 	 * 
-	 * @param fileName
+	 * @param fileName - is XML document
 	 */
 	public void buildListBeerItems(String fileName) {
 		FileInputStream inputStream = null;
@@ -78,11 +86,11 @@ public class StAXBeerItemsParser {
 	}
 
 	/**
-	 * This method parses tag beer
+	 * Returns an initialized {@code BeerItem} object by data from parsed XML document
 	 * 
-	 * @param reader
-	 * @return
-	 * @throws XMLStreamException
+	 * @param reader - an XMLStreamReader object
+	 * 
+	 * @return a new {@code BeerItem} object
 	 */
 	private BeerItem buildBeerItem(XMLStreamReader reader) throws XMLStreamException {
 		BeerItem beerItem = new BeerItem();
@@ -105,16 +113,16 @@ public class StAXBeerItemsParser {
 					tradeBrandBeerData.setManufacturerBeerName(getXMLText(reader));
 					break;
 				case INGREDIENTS:
-					beerItem.setChemicalComposition(getChemicalComponentsComposition(reader));
+					beerItem.setChemicalComposition(getXMLChemicalComponentsComposition(reader));
 					break;
 				case ALCOHOL:
 					beerItem.setAlcoholBeerType(getXMLText(reader));
 					break;
 				case CHARS:
 					if (reader.getAttributeCount() == 0) {
-						beerItem.setCharsData(getSoftBeverageCharacteristicData(reader));
+						beerItem.setCharsData(getXMLSoftBeverageCharacteristicData(reader));
 					} else {
-						beerItem.setCharsData(getAlcoholBeverageCharacteristicData(reader));
+						beerItem.setCharsData(getXMLAlcoholBeverageCharacteristicData(reader));
 					}
 					break;
 				default:
@@ -134,13 +142,15 @@ public class StAXBeerItemsParser {
 	}
 
 	/**
-	 * This method parses tag ingredients
+	 * Returns an initialized {@code ChemicalComponentsComposition} object by data from parsed XML document
 	 * 
-	 * @param reader
-	 * @return
+	 * @param reader - an XMLStreamReader object
+	 * 
+	 * @return a new {@code ChemicalComponentsComposition} object
+	 * 
 	 * @throws XMLStreamException
 	 */
-	private ChemicalComponentsComposition getChemicalComponentsComposition(XMLStreamReader reader)
+	private ChemicalComponentsComposition getXMLChemicalComponentsComposition(XMLStreamReader reader)
 			throws XMLStreamException {
 		ChemicalComponentsComposition chemicalComponentsComposition = new ChemicalComponentsComposition();
 		int type;
@@ -182,13 +192,15 @@ public class StAXBeerItemsParser {
 	}
 
 	/**
-	 * This method parses tag chars for alcohol beverage
+	 * Returns an initialized {@code AlcoholBeverageCharacteristicData} object by data from parsed XML document
 	 * 
-	 * @param reader
-	 * @return
+	 * @param reader - an XMLStreamReader object
+	 * 
+	 * @return a new {@code AlcoholBeverageCharacteristicData} object
+	 * 
 	 * @throws XMLStreamException
 	 */
-	private AlсoholBeverageСharacteristiсData getAlcoholBeverageCharacteristicData(XMLStreamReader reader)
+	private AlсoholBeverageСharacteristiсData getXMLAlcoholBeverageCharacteristicData(XMLStreamReader reader)
 			throws XMLStreamException {
 		AlсoholBeverageСharacteristiсData alcoholBeverageCharacteristicData = new AlсoholBeverageСharacteristiсData();
 		int type;
@@ -210,7 +222,7 @@ public class StAXBeerItemsParser {
 					alcoholBeverageCharacteristicData.setFoodValue(Float.parseFloat(getXMLText(reader)));
 					break;
 				case PACKAGING_TYPE:
-					alcoholBeverageCharacteristicData.setPackageType(getPackageType(reader));
+					alcoholBeverageCharacteristicData.setPackageType(getXMLPackageType(reader));
 					break;
 				default:
 					break;
@@ -228,13 +240,15 @@ public class StAXBeerItemsParser {
 	}
 
 	/**
-	 * This method parses tag chars for soft beverage
+	 * Returns an initialized {@code SoftBeverageCharacteristicData} object by data from parsed XML document
 	 * 
-	 * @param reader
-	 * @return
+	 * @param reader - an XMLStreamReader object
+	 * 
+	 * @return a new {@code SoftBeverageCharacteristicData} object
+	 * 
 	 * @throws XMLStreamException
 	 */
-	private SoftBeverageСharacteristiсData getSoftBeverageCharacteristicData(XMLStreamReader reader)
+	private SoftBeverageСharacteristiсData getXMLSoftBeverageCharacteristicData(XMLStreamReader reader)
 			throws XMLStreamException {
 		SoftBeverageСharacteristiсData softBeverageCharacteristicData = new SoftBeverageСharacteristiсData();
 		int type;
@@ -255,7 +269,7 @@ public class StAXBeerItemsParser {
 					softBeverageCharacteristicData.setFoodValue(Float.parseFloat(getXMLText(reader)));
 					break;
 				case PACKAGING_TYPE:
-					softBeverageCharacteristicData.setPackageType(getPackageType(reader));
+					softBeverageCharacteristicData.setPackageType(getXMLPackageType(reader));
 					break;
 				default:
 					break;
@@ -273,13 +287,15 @@ public class StAXBeerItemsParser {
 	}
 
 	/**
-	 * This method parses tag packaging type
+	 * Returns an initialized {@code PackageType} object by data from parsed XML document
 	 * 
-	 * @param reader
-	 * @return
+	 * @param reader - an XMLStreamReader object
+	 * 
+	 * @return a new {@code PackageType} object
+	 * 
 	 * @throws XMLStreamException
 	 */
-	private PackageType getPackageType(XMLStreamReader reader) throws XMLStreamException {
+	private PackageType getXMLPackageType(XMLStreamReader reader) throws XMLStreamException {
 		PackageType packageType = new PackageType();
 		int type;
 		String name;
@@ -309,7 +325,16 @@ public class StAXBeerItemsParser {
 		}
 		throw new XMLStreamException("Unknown element in tag Packaging Type");
 	}
-
+	
+	/**
+	 * Returns text from parsed XML file
+	 * 
+	 * @param reader - an XMLStreamReader object
+	 * 
+	 * @return text from parsed XML file
+	 * 
+	 * @throws XMLStreamException
+	 */
 	private String getXMLText(XMLStreamReader reader) throws XMLStreamException {
 		String text = null;
 		if (reader.hasNext()) {
