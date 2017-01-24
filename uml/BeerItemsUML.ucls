@@ -2,225 +2,288 @@
 <class-diagram version="1.1.13" icons="true" automaticImage="PNG" always-add-relationships="false" 
   generalizations="true" realizations="true" associations="true" dependencies="false" nesting-relationships="true" 
   router="FAN">  
-  <class id="1" language="java" name="by.beer.xml.parsers.builders.AbstractBeerItemsBuilder" project="BeerXMLProject" 
-    file="/BeerXMLProject/src/by/beer/xml/parsers/builders/AbstractBeerItemsBuilder.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1174" y="681"/>    
+  <class id="1" language="java" name="by.beer.entities.beeritem.BeerItem" project="BeerProject" 
+    file="/BeerProject/src/by/beer/entities/beeritem/BeerItem.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1501" y="1066"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="2" language="java" name="by.beer.xml.parsers.builders.BeerItemsDOMBuilder" project="BeerXMLProject" 
-    file="/BeerXMLProject/src/by/beer/xml/parsers/builders/BeerItemsDOMBuilder.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1318" y="913"/>    
+  <class id="2" language="java" name="by.beer.entities.beeritem.BeerItem.BuilderBeerItem" project="BeerProject" 
+    file="/BeerProject/src/by/beer/entities/beeritem/BeerItem.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="962" y="1021"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="3" language="java" name="by.beer.xml.parsers.builders.BeerItemsSAXBuilder" project="BeerXMLProject" 
-    file="/BeerXMLProject/src/by/beer/xml/parsers/builders/BeerItemsSAXBuilder.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1610" y="850"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="4" language="java" name="by.beer.xml.parsers.builders.BeerItemsStaxBuilder" project="BeerXMLProject" 
-    file="/BeerXMLProject/src/by/beer/xml/parsers/builders/BeerItemsStaxBuilder.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1005" y="884"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="5" language="java" name="by.beeritems.xml.parsers.dom.DOMBeerItemsParser" project="BeerXMLProject" 
-    file="/BeerXMLProject/src/by/beeritems/xml/parsers/dom/DOMBeerItemsParser.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1328" y="1050"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="6" language="java" name="by.beeritems.xml.parsers.sax.SAXBeerItemsParser" project="BeerXMLProject" 
-    file="/BeerXMLProject/src/by/beeritems/xml/parsers/sax/SAXBeerItemsParser.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1609" y="1009"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="7" language="java" name="by.beeritems.xml.parsers.stax.StAXBeerItemsParser" project="BeerXMLProject" 
-    file="/BeerXMLProject/src/by/beeritems/xml/parsers/stax/StAXBeerItemsParser.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="999" y="1044"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="8" language="java" name="by.beer.entities.beeritem.BeerItem" project="BeerXMLProject" 
-    file="/BeerXMLProject/src/by/beer/entities/beeritem/BeerItem.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="2042" y="609"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="9" language="java" name="by.beer.entities.beeritem.beerdata.chars.СharacteristiсData" 
-    project="BeerXMLProject" file="/BeerXMLProject/src/by/beer/entities/beeritem/beerdata/chars/СharacteristiсData.java" 
+  <class id="3" language="java" name="by.beer.entities.beeritem.beerdata.ChemicalComponentsComposition" 
+    project="BeerProject" file="/BeerProject/src/by/beer/entities/beeritem/beerdata/ChemicalComponentsComposition.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1938" y="1392"/>    
+    <position height="-1" width="-1" x="1890" y="1802"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="10" language="java" name="by.beer.entities.beeritem.beerdata.chars.SoftBeverageСharacteristiсData" 
-    project="BeerXMLProject" 
-    file="/BeerXMLProject/src/by/beer/entities/beeritem/beerdata/chars/SoftBeverageСharacteristiсData.java" 
+  <class id="4" language="java" name="by.beer.entities.beeritem.beerdata.TradeBrandBeerdata" project="BeerProject" 
+    file="/BeerProject/src/by/beer/entities/beeritem/beerdata/TradeBrandBeerdata.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1659" y="2198"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="by.beer.entities.beeritem.beerdata.chars.AlсoholBeverageСharacteristiсData" 
+    project="BeerProject" 
+    file="/BeerProject/src/by/beer/entities/beeritem/beerdata/chars/AlсoholBeverageСharacteristiсData.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1578" y="1922"/>    
+    <position height="-1" width="-1" x="722" y="3049"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="11" language="java" name="by.beer.entities.beeritem.beerdata.chars.AlсoholBeverageСharacteristiсData" 
-    project="BeerXMLProject" 
-    file="/BeerXMLProject/src/by/beer/entities/beeritem/beerdata/chars/AlсoholBeverageСharacteristiсData.java" 
-    binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="2262" y="1976"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="12" language="java" name="by.beer.entities.beeritem.beerdata.chars.PackageType" project="BeerXMLProject" 
-    file="/BeerXMLProject/src/by/beer/entities/beeritem/beerdata/chars/PackageType.java" binary="false" 
+  <class id="6" language="java" name="by.beer.entities.beeritem.beerdata.chars.PackageType" project="BeerProject" 
+    file="/BeerProject/src/by/beer/entities/beeritem/beerdata/chars/PackageType.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="2314" y="1388"/>    
+    <position height="-1" width="-1" x="1942" y="3335"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="13" language="java" name="by.beer.entities.beeritem.beerdata.TradeBrandBeerdata" project="BeerXMLProject" 
-    file="/BeerXMLProject/src/by/beer/entities/beeritem/beerdata/TradeBrandBeerdata.java" binary="false" 
+  <class id="7" language="java" name="by.beer.entities.beeritem.beerdata.chars.SoftBeverageСharacteristiсData" 
+    project="BeerProject" 
+    file="/BeerProject/src/by/beer/entities/beeritem/beerdata/chars/SoftBeverageСharacteristiсData.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="2731" y="598"/>    
+    <position height="-1" width="-1" x="1259" y="3219"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="14" language="java" name="by.beer.entities.beeritem.beerdata.ChemicalComponentsComposition" 
-    project="BeerXMLProject" 
-    file="/BeerXMLProject/src/by/beer/entities/beeritem/beerdata/ChemicalComponentsComposition.java" binary="false" 
+  <class id="8" language="java" name="by.beer.entities.beeritem.beerdata.chars.СharacteristiсData" project="BeerProject" 
+    file="/BeerProject/src/by/beer/entities/beeritem/beerdata/chars/СharacteristiсData.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="2662" y="1068"/>    
+    <position height="-1" width="-1" x="558" y="2456"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <generalization id="15">    
-    <end type="SOURCE" refId="11"/>    
-    <end type="TARGET" refId="9"/>  
+  <class id="9" language="java" name="by.beer.entities.beeritem.manager.ManagerBeerItem" project="BeerProject" 
+    file="/BeerProject/src/by/beer/entities/beeritem/manager/ManagerBeerItem.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1664" y="256"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="10" language="java" name="by.beer.xml.parsers.builders.AbstractBeerItemsBuilder" project="BeerProject" 
+    file="/BeerProject/src/by/beer/xml/parsers/builders/AbstractBeerItemsBuilder.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="4732" y="1478"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="11" language="java" name="by.beer.xml.parsers.builders.BeerItemsDOMBuilder" project="BeerProject" 
+    file="/BeerProject/src/by/beer/xml/parsers/builders/BeerItemsDOMBuilder.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="4892" y="1932"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="12" language="java" name="by.beer.xml.parsers.builders.BeerItemsSAXBuilder" project="BeerProject" 
+    file="/BeerProject/src/by/beer/xml/parsers/builders/BeerItemsSAXBuilder.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3616" y="2669"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="13" language="java" name="by.beer.xml.parsers.builders.BeerItemsStaxBuilder" project="BeerProject" 
+    file="/BeerProject/src/by/beer/xml/parsers/builders/BeerItemsStaxBuilder.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3751" y="1971"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="14" language="java" name="by.beeritems.xml.parsers.sax.SAXBeerItemsParser" project="BeerProject" 
+    file="/BeerProject/src/by/beeritems/xml/parsers/sax/SAXBeerItemsParser.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3240" y="2786"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="15" language="java" name="by.beeritems.xml.parsers.dom.DOMBeerItemsParser" project="BeerProject" 
+    file="/BeerProject/src/by/beeritems/xml/parsers/dom/DOMBeerItemsParser.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="4898" y="2155"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="16" language="java" name="by.beeritems.xml.parsers.stax.StAXBeerItemsParser" project="BeerProject" 
+    file="/BeerProject/src/by/beeritems/xml/parsers/stax/StAXBeerItemsParser.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3350" y="2036"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <association id="17">    
+    <end type="SOURCE" refId="14" navigable="false">      
+      <attribute id="18" name="beerItemList"/>      
+      <multiplicity id="19" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="1" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="20">    
+    <end type="SOURCE" refId="16" navigable="false">      
+      <attribute id="21" name="beerItems"/>      
+      <multiplicity id="22" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="1" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="23">    
+    <end type="SOURCE" refId="10" navigable="false">      
+      <attribute id="24" name="beerItems"/>      
+      <multiplicity id="25" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="1" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="26">    
+    <end type="SOURCE" refId="14" navigable="false">      
+      <attribute id="27" name="currentPackageType"/>      
+      <multiplicity id="28" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="6" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="29">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="10"/>  
   </generalization>  
-  <association id="16">    
+  <generalization id="30">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="8"/>  
+  </generalization>  
+  <association id="31">    
     <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="17" name="beerItems">        
-        <position height="0" width="0" x="1372" y="552"/>      
-      </attribute>      
-      <multiplicity id="18" minimum="0" maximum="2147483647">        
-        <position height="0" width="0" x="1372" y="552"/>      
-      </multiplicity>    
+      <attribute id="32" name="chemicalComposition"/>      
+      <multiplicity id="33" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="34">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="35" name="brandData"/>      
+      <multiplicity id="36" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="37">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="38" name="charsData"/>      
+      <multiplicity id="39" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="8" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <generalization id="19">    
-    <end type="SOURCE" refId="3"/>    
-    <end type="TARGET" refId="1"/>  
-  </generalization>  
-  <association id="20">    
+  <association id="40">    
+    <bendpoint x="968" y="1276"/>    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="41" name="beerItemObject"/>      
+      <multiplicity id="42" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="1" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="43">    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="44" name="packageType"/>      
+      <multiplicity id="45" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="6" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <nesting id="46">    
+    <bendpoint x="1490" y="719"/>    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="2"/>  
+  </nesting>  
+  <association id="47">    
     <end type="SOURCE" refId="9" navigable="false">      
-      <attribute id="21" name="packageType">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="22" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
+      <attribute id="48" name="listBeerItem"/>      
+      <multiplicity id="49" minimum="0" maximum="2147483647"/>    
     </end>    
-    <end type="TARGET" refId="12" navigable="true"/>    
+    <end type="TARGET" refId="1" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="23">    
-    <end type="SOURCE" refId="8" navigable="false">      
-      <attribute id="24" name="charsData">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="25" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="9" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="26">    
-    <end type="SOURCE" refId="2"/>    
-    <end type="TARGET" refId="1"/>  
+  <generalization id="50">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="8"/>  
   </generalization>  
-  <association id="27">    
-    <end type="SOURCE" refId="8" navigable="false">      
-      <attribute id="28" name="brandData">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="29" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
+  <association id="51">    
+    <end type="SOURCE" refId="14" navigable="false">      
+      <attribute id="52" name="currentCharsData"/>      
+      <multiplicity id="53" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="13" navigable="true"/>    
+    <end type="TARGET" refId="8" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <generalization id="30">    
-    <end type="SOURCE" refId="4"/>    
-    <end type="TARGET" refId="1"/>  
+  <generalization id="54">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="10"/>  
   </generalization>  
-  <association id="31">    
-    <end type="SOURCE" refId="8" navigable="false">      
-      <attribute id="32" name="chemicalComposition">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="33" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
+  <association id="55">    
+    <end type="SOURCE" refId="14" navigable="false">      
+      <attribute id="56" name="currentChemicalComposition"/>      
+      <multiplicity id="57" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="14" navigable="true"/>    
+    <end type="TARGET" refId="3" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <generalization id="34">    
-    <end type="SOURCE" refId="10"/>    
-    <end type="TARGET" refId="9"/>  
+  <association id="58">    
+    <end type="SOURCE" refId="14" navigable="false">      
+      <attribute id="59" name="currentBrandData"/>      
+      <multiplicity id="60" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="61">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="10"/>  
   </generalization>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    

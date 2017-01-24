@@ -35,6 +35,8 @@ public class BeerItemsDOMBuilder extends AbstractBeerItemsBuilder {
 	 * Returns a list of initialized {@code BeerItem} object's from XML file.
 	 * 
 	 * @param fileName
+	 *            - a path to XML file document
+	 *            
 	 * @return a list if {@code BeerItem} objects -
 	 */
 	@Override
@@ -53,7 +55,7 @@ public class BeerItemsDOMBuilder extends AbstractBeerItemsBuilder {
 
 			// Here comes the root node
 			Element root = document.getDocumentElement();
-			this.beerItems = DOMBeerItemsParser.listBuilder(root);
+			super.beerItems = DOMBeerItemsParser.listBuilder(root);
 
 		} catch (SAXException e) {
 			System.out.println("Problem of parser" + e);
@@ -62,7 +64,7 @@ public class BeerItemsDOMBuilder extends AbstractBeerItemsBuilder {
 		} catch (IOException e) {
 			System.out.println("Problem of reading file" + fileName + "\n" + e);
 		}
-		return (this.beerItems);
+		return (super.beerItems);
 	}
 
 }

@@ -1,19 +1,11 @@
 package by.beeritems.xml.parsers.sax;
 
-import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
 
-import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.parsers.SAXParser;
-import javax.xml.parsers.SAXParserFactory;
-
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
-import org.xml.sax.XMLReader;
 import org.xml.sax.helpers.DefaultHandler;
-import org.xml.sax.helpers.XMLReaderFactory;
-
 import by.beer.entities.beeritem.BeerItem;
 import by.beer.entities.beeritem.beerdata.ChemicalComponentsComposition;
 import by.beer.entities.beeritem.beerdata.TradeBrandBeerdata;
@@ -34,34 +26,37 @@ import by.beer.entities.beeritem.beerdata.chars.СharacteristiсData;
  */
 public class SAXBeerItemsParser extends DefaultHandler {
 
-	private String currentElement = "";
+	private String currentElement;
+
+	private static int BEER_ID = 0;
+	private static int ALCOHOL_VOLUME = 0;
 
 	// -- BeerItem container
-	private List<BeerItem> beerItemList = new LinkedList<>();
+	private List<BeerItem> beerItemList;
 	// --------------------------------------
 
 	// --Beer ID
-	private int currentBeerId = 0;
+	private int currentBeerId;
 	// --------------------------------------
 
 	// --TradeBrandBeerdata
-	private TradeBrandBeerdata currentBrandData = null;
-	private String currentBeerName = "";
-	private String currentManufacturerBeerName = "";
-	private String currentSortBeerType = "";
+	private TradeBrandBeerdata currentBrandData;
+	private String currentBeerName;
+	private String currentManufacturerBeerName;
+	private String currentSortBeerType;
 	// --------------------------------------
 
 	// --ChemicalComponentsComposition
 	private ChemicalComponentsComposition currentChemicalComposition;
-	private int currentWaterСapacity = 0;
-	private int currentSugarСapacity = 0;
-	private int currentHopСapacity = 0;
-	private int currentMaltСapacity = 0;
-	private int currentYeastСapacity = 0;
+	private int currentWaterСapacity;
+	private int currentSugarСapacity;
+	private int currentHopСapacity;
+	private int currentMaltСapacity;
+	private int currentYeastСapacity;
 	// --------------------------------------
 
 	// --AlcoholBeerType
-	private String currentAlcoholBeerType = "";
+	private String currentAlcoholBeerType;
 	// --------------------------------------
 
 	// --СharacteristiсData
@@ -77,26 +72,6 @@ public class SAXBeerItemsParser extends DefaultHandler {
 	private String currentPackageMaterial;
 	// --------------------------------------
 
-	public static void main(String[] args) {
-
-		SAXBeerItemsParser hundler = new SAXBeerItemsParser();
-		XMLReader reader;
-
-		try {
-
-			reader = XMLReaderFactory.createXMLReader();
-			reader.setContentHandler(hundler);
-			reader.parse("xml//BeerItems.xml");
-
-		} catch (SAXException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
-
 	@Override
 	public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
 
@@ -104,7 +79,7 @@ public class SAXBeerItemsParser extends DefaultHandler {
 
 		case "beer": {
 			currentElement = localName;
-			this.currentBeerId = Integer.parseInt(attributes.getValue(0));
+			this.currentBeerId = Integer.parseInt(attributes.getValue(BEER_ID));
 			break;
 		}
 
@@ -162,7 +137,7 @@ public class SAXBeerItemsParser extends DefaultHandler {
 			currentElement = localName;
 
 			if (this.currentAlcoholBeerType.equals("alcoholic beverage")) {
-				this.currentAlcoholVolume = Float.parseFloat(attributes.getValue(0));
+				this.currentAlcoholVolume = Float.parseFloat(attributes.getValue(ALCOHOL_VOLUME));
 			}
 			break;
 		}
@@ -332,7 +307,6 @@ public class SAXBeerItemsParser extends DefaultHandler {
 		}
 	}
 
-	
 	/**
 	 * Initializes a {@code СharacteristiсData} field for a new {@code BeerItem}
 	 * object.
@@ -417,6 +391,31 @@ public class SAXBeerItemsParser extends DefaultHandler {
 				.alcoholBeerType(this.currentAlcoholBeerType).charsData(this.currentCharsData).newInstance();
 
 		beerItemList.add(newBeerItem);
+	}
+
+	/**
+	 * Constructs a default <code>SAXBeerItemsParser</code> object and
+	 * initialize a container for {@code BeerItem} objects.
+	 * 
+	 * @see BeerItem
+	 */
+	public SAXBeerItemsParser() {
+		beerItemList = new LinkedList<>();
+	}
+
+	/**
+	 * @return the beerItemList
+	 */
+	public List<BeerItem> getBeerItemList() {
+		return beerItemList;
+	}
+
+	/**
+	 * @param beerItemList
+	 *            the beerItemList to set
+	 */
+	public void setBeerItemList(List<BeerItem> beerItemList) {
+		this.beerItemList = beerItemList;
 	}
 
 }

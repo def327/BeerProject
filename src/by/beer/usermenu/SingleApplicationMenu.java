@@ -31,6 +31,9 @@ public class SingleApplicationMenu {
 	 */
 	public void runAppMenu() {
 
+		// Application's greeting for user
+		System.out.println(ResourceBundleManager.getProperty("app_greeting.message"));
+
 		// Creates only one Scanner object for a whole menu
 		Scanner inReader = new Scanner(System.in);
 
