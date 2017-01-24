@@ -1,12 +1,15 @@
 package by.beer.entities.beeritem.beerdata.chars;
 
+import by.beer.entities.beeritem.BeerItem;
+
 /**
  * Class {@code СharacteristiсData} provides production technologies's
  * information about {@code BeerItem} class.
  * 
  * @author Dmitry Zyablov
  * 
- * @see by.beer.entities.beeritem.BeerItem
+ * 
+ * @see BeerItem
  *
  * 
  */
