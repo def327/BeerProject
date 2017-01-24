@@ -64,15 +64,20 @@ public class SAXBeerItemsParser extends DefaultHandler {
 
 	// --СharacteristiсData
 	private СharacteristiсData currentCharsData;
-	private int beerClarity;
-	private boolean isFiltered;
-	private float foodValue;
+	private int currentBeerClarity;
+	private boolean currentIsFiltered;
+	private float currentFoodValue;
+	private float currentAlcoholVolume;
+	// --------------------------------------
+
 	// ---PackageType
 	private PackageType packageType;
 	private float packageCapacity;
 	private String packageMaterial;
 	// ----------------------------------
-	// --------------------------------------------
+	// --------------------------------------
+
+	private boolean wasParsed = false;
 
 	public static void main(String[] args) {
 
@@ -121,7 +126,7 @@ public class SAXBeerItemsParser extends DefaultHandler {
 		}
 
 		case "ingredients": {
-			currentElement = "localName";
+			currentElement = localName;
 			break;
 		}
 
@@ -155,6 +160,30 @@ public class SAXBeerItemsParser extends DefaultHandler {
 			break;
 		}
 
+		case "chars": {
+			currentElement = localName;
+
+			if (this.currentAlcoholBeerType.equals("alcoholic beverage")) {
+				this.currentAlcoholVolume = Float.parseFloat(attributes.getValue(0));
+			}
+			break;
+		}
+
+		case "beer-clarity": {
+			currentElement = localName;
+			break;
+		}
+
+		case "is-filtered": {
+			currentElement = localName;
+			break;
+		}
+
+		case "food-value": {
+			currentElement = localName;
+			break;
+		}
+
 		default: {
 			break;
 		}
@@ -171,6 +200,11 @@ public class SAXBeerItemsParser extends DefaultHandler {
 		if (this.currentBeerName.equals("") && currentElement.equals("name")) {
 
 			this.currentBeerName = elementDataFromXML;
+		}
+
+		else if (currentElement.equals("sort-type")) {
+
+			this.currentSortBeerType = elementDataFromXML;
 		}
 
 		else if (this.currentSortBeerType.equals("") && currentElement.equals("sort-type")) {
@@ -237,9 +271,9 @@ public class SAXBeerItemsParser extends DefaultHandler {
 					currentMaltСapacity, currentYeastСapacity);
 			break;
 		}
-		
-		case "alcohol":{
-			
+
+		case "alcohol": {
+
 			showBeer();
 			clearFields();
 			break;
@@ -247,38 +281,7 @@ public class SAXBeerItemsParser extends DefaultHandler {
 
 		}
 
-	}
-
-	private void showBeer() {
-
-		System.out.println("ID " + this.currentBeerId);
-		System.out.println(this.currentBrandData);
-		System.out.println(this.currentChemicalComposition);
-		System.out.println(this.currentAlcoholBeerType);
-
-		System.out.println("--------------------------------------");
-
-	}
-
-	private void clearFields() {
-
-		this.currentBeerId = 0;
-		
-		this.currentBeerName = "";
-		this.currentSortBeerType = "";
-		this.currentManufacturerBeerName = "";
-		
-		this.currentWaterСapacity = 0;
-		this.currentSugarСapacity = 0;
-		this.currentHopСapacity = 0;
-		this.currentMaltСapacity = 0;
-		
-		this.currentYeastСapacity = 0;
-		
-		this.currentAlcoholBeerType = "";
-
-		currentElement = "";
-
+		wasParsed = true;
 	}
 
 	/**
@@ -345,6 +348,38 @@ public class SAXBeerItemsParser extends DefaultHandler {
 	public void endDocument() throws SAXException {
 		// TODO Auto-generated method stub
 		super.endDocument();
+	}
+
+	private void showBeer() {
+
+		System.out.println("ID " + this.currentBeerId);
+		System.out.println(this.currentBrandData);
+		System.out.println(this.currentChemicalComposition);
+		System.out.println(this.currentAlcoholBeerType);
+
+		System.out.println("--------------------------------------");
+
+	}
+
+	private void clearFields() {
+
+		this.currentBeerId = 0;
+
+		this.currentBeerName = "";
+		this.currentSortBeerType = "";
+		this.currentManufacturerBeerName = "";
+
+		this.currentWaterСapacity = 0;
+		this.currentSugarСapacity = 0;
+		this.currentHopСapacity = 0;
+		this.currentMaltСapacity = 0;
+
+		this.currentYeastСapacity = 0;
+
+		this.currentAlcoholBeerType = "";
+
+		currentElement = "";
+
 	}
 
 }
