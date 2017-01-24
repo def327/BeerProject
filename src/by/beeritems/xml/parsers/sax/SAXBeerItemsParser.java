@@ -321,7 +321,7 @@ public class SAXBeerItemsParser extends DefaultHandler {
 		}
 
 		case "beer": {
-			addParsedBeerItemObjectToList();	
+			addParsedBeerItemObjectToList();
 			break;
 		}
 
@@ -332,12 +332,7 @@ public class SAXBeerItemsParser extends DefaultHandler {
 		}
 	}
 
-	private void addParsedBeerItemObjectToList() {
-		
-		
-		
-	}
-
+	
 	/**
 	 * Initializes a {@code СharacteristiсData} field for a new {@code BeerItem}
 	 * object.
@@ -407,16 +402,21 @@ public class SAXBeerItemsParser extends DefaultHandler {
 				this.currentSortBeerType);
 	}
 
-	private void showBeer() {
+	/**
+	 * Initializes all fields of a new {@code BeerItem} object and add it to a
+	 * list of {@code BeerItem} objects.
+	 * 
+	 * @see BeerItem
+	 * 
+	 */
+	private void addParsedBeerItemObjectToList() {
 
-		System.out.println("ID " + this.currentBeerId);
-		System.out.println(this.currentBrandData);
-		System.out.println(this.currentChemicalComposition);
-		System.out.println(this.currentAlcoholBeerType);
-		System.out.println(this.currentCharsData);
+		// Initializing fields of a new BeerItem by inner Class
+		BeerItem newBeerItem = new BeerItem.BuilderBeerItem().beerId(this.currentBeerId)
+				.brandData(this.currentBrandData).chemicalComposition(this.currentChemicalComposition)
+				.alcoholBeerType(this.currentAlcoholBeerType).charsData(this.currentCharsData).newInstance();
 
-		System.out.println("--------------------------------------");
-
+		beerItemList.add(newBeerItem);
 	}
 
 }
